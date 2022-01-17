@@ -1,11 +1,11 @@
 <h1>Upload a discovery</h1>
 
-<form action='/create' method='post' class='form'>
+<form action='/create' method='post' class='form' enctype="multipart/form-data">
     <label for='title' class='label'>Title:</label>
-    <input id='title' name='title' type='text' />
+    <input id='title' name='title' type='text'/>
 
     <label for='image' class='label'>Image:</label>
-    <input id='image' name='image' type='file' />
+    <input id='image' name='image' type='file'/>
 
     <label for='category' class='label'>Category:</label>
     <select name='category'>
@@ -16,7 +16,7 @@
     </select>
 
     <label for='location' class='label'>Location:</label>
-    <input id='location' name='location' type='text' />
+    <input id='location' name='location' type='text'/>
 
     <label for='arrond' class='label'>Arrondissement:</label>
     <select name='category'>
@@ -43,10 +43,10 @@
     </select>
 
     <label for='websiteUrl' class='label'>Website:</label>
-    <input id='websiteUrl' name='websiteUrl' type='text' />
+    <input id='websiteUrl' name='websiteUrl' type='text'/>
 
     <label for='comments' class='label'>Comments:</label>
-    <input id='comments' name='comments' type='text' />
+    <input id='comments' name='comments' type='text'/>
 
     <button>Upload!</button>
 </form>

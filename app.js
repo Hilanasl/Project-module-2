@@ -13,6 +13,7 @@ const session = require("express-session");
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const arrondRouter = require('./routes/arrond')
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use(require("./middlewares/exposeFlashMessage"));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/', arrondRouter);
 
 
 
