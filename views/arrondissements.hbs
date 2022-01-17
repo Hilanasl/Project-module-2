@@ -1,0 +1,21 @@
+<h1>See museums by arrondissement</h1>
+
+{{card.arrond}}
+
+<section>
+    <div>
+        {{#each card}}
+        <p>{{this.title}}</p>
+        <p>{{this.image}}</p>
+        <p>{{this.category}}</p>
+        {{#if location}}
+        <p>{{this.location}}</p>
+        {{/if}}
+        <p>{{this.category}}</p>
+        <p>{{this.address}}</p>
+        <p>{{this.arrond}}</p>
+        <p>{{this.websiteUrl}}</p>
+        {{/each}}
+
+    </div>
+</section>
