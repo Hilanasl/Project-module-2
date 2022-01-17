@@ -8,10 +8,29 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/arrond', (req, res) => {
+router.get('/arrond', (req, res, next) => {
   res.render('arrondissements')
 })
 
-router.get('/signin')
+router.get('/signin', (req, res, next) => {
+  res.render('auth/signin')
+})
 
+router.post('/signin', (req, res, next) => {
+  res.render
+})
+
+router.get('/signup', (req, res) => {
+  res.render('auth/signup')
+})
+
+//router.get("/signout", protectRoute, (req, res) => {
+// req.session.destroy(function (err) {
+//    res.redirect("/auth/signin");
+// });
+//});
+
+router.get('/profile', (req, res, next) => {
+  res.render('dashboardUser');
+});
 module.exports = router;
