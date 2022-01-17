@@ -1,15 +1,21 @@
-<form action="/auth/signup/" method="POST">
+<header>
+    <h1>Register to have access to all the museums</h1>
+</header>
+
+{{> flashMessage}}
+
+<form action="/signup" method="POST">
     <label for="fullname">Full name</label>
-    <input type="text" name="fullname" id="fullname" />
+    <input type="text" name="fullname" id="fullname" required />
 
     <label for="username">Username</label>
-    <input type="text" name="username" id="username" />
+    <input type="text" name="username" id="username" required />
 
     <label for="email">E-mail</label>
-    <input type="email" name="email" id="email" />
+    <input type="email" name="email" id="email" required />
 
     <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
+    <input type="password" name="password" id="password" required />
 
     <button>Submit</button>
 </form>

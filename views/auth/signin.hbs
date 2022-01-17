@@ -1,10 +1,16 @@
+<header>
+    <h1>Want to see all museums? Please Sign In!</h1>
+</header>
+
+{{> flashMessage}}
+
 <form action="/signin" method="POST">
 
     <label for="email">E-mail</label>
-    <input type="email" name="email" id="email" />
+    <input type="email" name="email" id="email" placeholder="user@email.com" required />
 
     <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
+    <input type="password" name="password" id="password" placeholder="••••••" required />
 
-    <button>Submit</button>
+    <button>Sign In!</button>
 </form>

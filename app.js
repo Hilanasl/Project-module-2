@@ -6,9 +6,10 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-//const flash = require("connect-flash"); // designed to keep messages between 2 http request/response cycles
+const flash = require("connect-flash"); // designed to keep messages between 2 http request/response cycles
 const hbs = require("hbs");
 const session = require("express-session");
+//const MongoStore = require("connect-mongo")(session);
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -26,8 +27,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// SESSION SETUP
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    saveUninitialized: true,
+    resave: true
+  })
+);
+
+app.use(flash());
+app.use(require("./middlewares/exposeFlashMessage"));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 
 // catch 404 and forward to error handler
