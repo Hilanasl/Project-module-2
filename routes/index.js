@@ -8,5 +8,10 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/arrond', (req, res) => {
+  res.render('arrondissements')
+})
+
+router.get('/signin')
 
 module.exports = router;
