@@ -1,5 +1,9 @@
 <h2>{{oneCard.title}}</h2>
 
+<div class='onecard-container'>
+<div class='return'>
+<a href='/arrond/{{oneCard.arrond}}' class='return-btn'>{{oneCard.arrond}} arrond.</a>
+</div>
 <div class='onecard'>
 <img src="{{oneCard.image}}"/>
 <p>{{oneCard.category}}</p>
@@ -8,4 +12,13 @@
 <p>{{oneCard.arrond}}</p>
 <p>{{oneCard.websiteUrl}}</p>
 <p>{{oneCard.comments}}</p>
+
+</div>
+{{#if isLoggedIn}}
+<div class='crud'>
+    <a href="/profile/:id/update">Update discovery</a>
+    <a href="/profile">Delete discovery</a>
+</div>
+{{/if}}
+
 </div>

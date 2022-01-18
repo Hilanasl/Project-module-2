@@ -3,8 +3,10 @@ var router = express.Router();
 const Card = require('./../models/CardModel')
 const User = require('./../models/UserModel')
 const parser = require('./../config/cloudinary')
+const protectPrivate = require('./../middlewares/protectRoute');
 
-router.get('/profile/create', (req, res, next) => {
+
+router.get('/profile/create', protectPrivate, (req, res, next) => {
   res.render('add-card');
 });
 
@@ -20,5 +22,30 @@ router.post('/profile/create', parser.single('image'), async (req, res, next) =>
     next(err)
   }
 });
+
+
+router.get('/profile/:id/update', async (req, res, next) => {
+try {
+  const cardToEdit = await Card.findById(req.params.id);
+  res.render('update-card', {
+    cardToEdit
+  })
+} catch (err) {
+  next(err)
+}
+});
+
+
+router.post('/profile/:id/update', async (req, res, next) => {
+  try {
+    await Card.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect('/profile');
+  } catch (err) {
+    res.render('update-card')
+    next(err);
+  }
+});
+
+
 
 module.exports = router;
