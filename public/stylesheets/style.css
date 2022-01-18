@@ -60,6 +60,31 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+.cat-tags {
+  margin: 30px
+}
+
+.cat-tags a {
+  color:rgb(67, 90, 153);
+  text-decoration: none;
+  border: 1px rgb(187, 186, 186) solid;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 15px;
+  width: 7vw;
+  margin: 10px
+}
+
+.cat-tags a:hover {
+  border: 1px rgb(87, 86, 86) solid;
+}
+
+.tag-p {
+  color:rgb(175, 60, 7);
+  font-weight: bold;
+}
+
+
 .card {
   background-color: rgb(184, 17, 67);
   color: whitesmoke;
