@@ -42,6 +42,7 @@ app.use(
 );
 
 app.use(flash());
+app.use(require("./middlewares/exposeLoginStatus"));
 app.use(require("./middlewares/exposeFlashMessage"));
 
 app.use('/', indexRouter);

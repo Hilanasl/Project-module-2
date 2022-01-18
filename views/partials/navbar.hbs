@@ -1,11 +1,16 @@
 <nav>
     <div class='home-btn'>
-    <a href="/" class="to-left">Home</a>
+        <a href="/" class="to-left">Home</a>
     </div>
     <div class='user-btns'>
-    <a href="/signin" class="to-right">Sign In</a>
-    <a href="/signup" class="to-right">Sign Up</a>
-    <a href="/signout" class="to-right">Sign Out</a>
-    <a href="/profile" class="to-right">Profile</a>
+        {{#unless isLoggedIn}}
+        <a href="/signin" class="to-right">Sign In</a>
+        <a href="/signup" class="to-right">Sign Up</a>
+        {{/unless}}
+
+        {{#if isLoggedIn}}
+        <a href="/signout" class="to-right">Sign Out</a>
+        <a href="/profile" class="to-right">Profile</a>
+        {{/if}}
     </div>
 </nav>

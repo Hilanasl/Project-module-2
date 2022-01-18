@@ -85,7 +85,7 @@ router.post("/signup", (req, res, next) => {
 });
 
 
-router.get('/profile', (req, res, next) => {
+router.get('/profile', protectPrivate, (req, res, next) => {
   res.render('dashboardUser');
 });
 
