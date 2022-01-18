@@ -6,7 +6,7 @@ const cardSchema = new Schema(
     {
         title: String,
         image: String,
-        category: String,
+        category: [String],
         location: String,
         address: String,
         arrond: String,

@@ -28,7 +28,7 @@ router.post('/signin', protectUnlogged, (req, res, next) => {
 
   User.findOne({ email: userInfo.email })
     .then((user) => {
-      if (!userInfo) {
+      if (!user) {
         req.flash("error", "Invalid credential");
         res.redirect('/signin');
       }
@@ -94,5 +94,7 @@ router.get("/signout", protectPrivate, (req, res) => {
     res.redirect("/signin");
   });
 });
+
+
 
 module.exports = router;

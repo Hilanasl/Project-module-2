@@ -16,7 +16,8 @@ const cloudinaryStorage = require("multer-storage-cloudinary");
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const arrondRouter = require('./routes/arrond')
+const arrondRouter = require('./routes/arrond');
+const expoRouter = require('./routes/expo');
 
 const app = express();
 
@@ -47,7 +48,9 @@ app.use(require("./middlewares/exposeFlashMessage"));
 
 app.use('/', indexRouter);
 app.use('/', usersRouter);
+app.use('/', expoRouter);
 app.use('/', arrondRouter);
+
 
 
 
