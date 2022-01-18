@@ -11,6 +11,8 @@ router.get('/profile/create', (req, res, next) => {
 
 router.post('/profile/create', parser.single('image'), async (req, res, next) => {
   const newCard = { ...req.body };
+  if (!req.file) newCard.image = undefined;
+  else newCard.image = req.file.path;
   try {
     await Card.create(newCard);
     res.redirect('/profile')

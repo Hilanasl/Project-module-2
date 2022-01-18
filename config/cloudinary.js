@@ -9,7 +9,7 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_SECRET,
     folder: "demo",
     allowedFormats: ["jpg", "png"],
-    transformation: [{ width: 500, height: 500, crop: "limit" }]
+    transformation: [{ crop: "limit" }]
 });
 
 // cloudinary : SAAS platform : specialized in images hosting (tools : metadata, image analyzing ...)
