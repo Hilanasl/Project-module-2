@@ -1,13 +1,14 @@
-<h1>See museums in the {{cards.0.arrond}}</h1>
+<h1>Explore the {{cards.0.arrond}}</h1>
 
-<section>
-    <div>
+<section class='container'>
         {{#each cards}}
+        <div class='card'>
+        <p>Image: <img src="{{oneCard.imageUrl}}"/></p>
         <p>{{this.title}}</p>
         <p>{{this.image}}</p>
         <p>{{this.category}}</p>
         <p>Arrondissement: {{this.arrond}}</p>
         <a href='/arrond/{{this.arrond}}/{{this._id}}'>See more info</a>
+        </div>
         {{/each}}
-    </div>
 </section>
