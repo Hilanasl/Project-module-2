@@ -24,10 +24,11 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+// added 17/01
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.json())
 // SESSION SETUP
 app.use(
   session({

@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Card = require('./../models/CardModel');
 const User = require('./../models/UserModel');
-const protectRoute = require('./../middlewares/protectRoute');
+const protectPrivate = require('./../middlewares/protectRoute');
+const protectUnlogged = require('./../middlewares/protectUnlogged')
 const bcrypt = require('bcrypt');
 const salt = 10;
 
@@ -17,19 +18,36 @@ router.get('/signin', (req, res, next) => {
   res.render('auth/signin')
 })
 
-router.post('/signin', (req, res, next) => {
+router.post('/signin', protectUnlogged, (req, res, next) => {
   const userInfo = req.body;
 
   if (!userInfo.email || !userInfo.password) {
     req.flash("warning", "All fields are required!");
     res.redirect("/signin");
   }
+
   User.findOne({ email: userInfo.email })
     .then((user) => {
-      if (!userInfo)
+      if (!userInfo) {
         req.flash("error", "Invalid credential");
-      res.redirect('/signin')
+        res.redirect('/signin');
+      }
+      console.log(userInfo);
+      const checkPassword = bcrypt.compareSync(userInfo.password, user.password);
+
+      if (!checkPassword) {
+        req.flash("error", "Invalid credential");
+        res.redirect('/signin');
+      } else {
+        const userObject = user.toObject();
+        delete userObject.password;
+        console.log(userObject);
+        req.session.currentUser = userObject;
+        req.flash("success", "Successfully signed in!")
+        res.redirect('/profile')
+      }
     })
+    .catch(next)
 })
 
 router.get('/signup', (req, res) => {
@@ -67,9 +85,14 @@ router.post("/signup", (req, res, next) => {
 });
 
 
-
 router.get('/profile', (req, res, next) => {
   res.render('dashboardUser');
+});
+
+router.get("/signout", protectPrivate, (req, res) => {
+  req.session.destroy(function (err) {
+    res.redirect("/signin");
+  });
 });
 
 module.exports = router;
