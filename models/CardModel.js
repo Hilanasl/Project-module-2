@@ -11,7 +11,9 @@ const cardSchema = new Schema(
         address: String,
         arrond: String,
         websiteUrl: String,
-        comments: String
+        comments: String,
+        author: {type: Schema.Types.ObjectId, 
+            ref: "users" }
     }
 );
 

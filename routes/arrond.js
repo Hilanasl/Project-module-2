@@ -27,7 +27,7 @@ router.get('/arrond/:arrond/:id', async (req, res, next) => {
 })
 
 
-router.get('/:category', async (req, res, next) => {
+router.get('/category/:category', async (req, res, next) => {
     try {
     const catCards = await Card.find({category: req.params.category})
     res.render('category', {
