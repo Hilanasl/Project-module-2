@@ -99,8 +99,9 @@ nav a:hover {
 }
 
 .card img {
-  width: 18vw;
-  margin: 5px
+  width: 19vw;
+  margin: 5px;
+  border-radius: 5%;
 }
 
 .card a {
@@ -130,8 +131,10 @@ nav a:hover {
 }
 
 .onecard img {
-  width: 33vw;
-  margin: 5px
+  width: 34vw;
+  margin: 5px;
+  border-radius: 5%;
+
 }
 
 
