@@ -10,6 +10,9 @@ const flash = require("connect-flash"); // designed to keep messages between 2 h
 const hbs = require("hbs");
 const session = require("express-session");
 //const MongoStore = require("connect-mongo")(session);
+const multer = require("multer");
+const cloudinary = require("cloudinary");
+const cloudinaryStorage = require("multer-storage-cloudinary");
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -41,7 +44,7 @@ app.use(flash());
 app.use(require("./middlewares/exposeFlashMessage"));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', usersRouter);
 app.use('/', arrondRouter);
 
 

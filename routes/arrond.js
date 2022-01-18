@@ -6,7 +6,9 @@ const User = require('./../models/UserModel')
 router.get('/arrond/:arrond', async (req, res, next) => {
     try {
     const cards = await Card.find({arrond: req.params.arrond})
-    res.render('arrondissements', {cards})} 
+    res.render('arrondissements', {
+        cards
+    })} 
     catch (err) {
         next(err)
         }

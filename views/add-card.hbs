@@ -1,9 +1,9 @@
-<h1>Upload a discovery</h1>
+<h1>Add a discovery</h1>
 
-<form action='/create' method='post' class='form' enctype="multipart/form-data">
+<form action='/profile/create' method='post' class='form' enctype="multipart/form-data">
     <label for='title' class='label'>Title:</label>
     <input id='title' name='title' type='text'/>
-
+ 
     <label for='image' class='label'>Image:</label>
     <input id='image' name='image' type='file'/>
 
@@ -18,28 +18,31 @@
     <label for='location' class='label'>Location:</label>
     <input id='location' name='location' type='text'/>
 
+    <label for='address' class='label'>Address:</label>
+    <input id='address' name='address' type='text'/>
+
     <label for='arrond' class='label'>Arrondissement:</label>
-    <select name='category'>
-        <option value='1'>1st</option>
-        <option value='2'>2nd</option>
-        <option value='3'>3rd</option>
-        <option value='4'>4th</option>
-        <option value='5'>5th</option>
-        <option value='6'>6th</option>
-        <option value='7'>7th</option>
-        <option value='8'>8th</option>
-        <option value='9'>9th</option>
-        <option value='10'>10th</option>
-        <option value='11'>11th</option>
-        <option value='12'>12th</option>
-        <option value='13'>13th</option>
-        <option value='14'>14th</option>
-        <option value='15'>15th</option>
-        <option value='16'>16th</option>
-        <option value='17'>17th</option>
-        <option value='18'>18th</option>
-        <option value='19'>19th</option>
-        <option value='20'>20th</option>
+    <select name='arrond'>
+        <option value='1st'>1st</option>
+        <option value='2nd'>2nd</option>
+        <option value='3rd'>3rd</option>
+        <option value='4th'>4th</option>
+        <option value='5th'>5th</option>
+        <option value='6th'>6th</option>
+        <option value='7th'>7th</option>
+        <option value='8th'>8th</option>
+        <option value='9th'>9th</option>
+        <option value='10th'>10th</option>
+        <option value='11th'>11th</option>
+        <option value='12th'>12th</option>
+        <option value='13th'>13th</option>
+        <option value='14th'>14th</option>
+        <option value='15th'>15th</option>
+        <option value='16th'>16th</option>
+        <option value='17th'>17th</option>
+        <option value='18th'>18th</option>
+        <option value='19th'>19th</option>
+        <option value='20th'>20th</option>
     </select>
 
     <label for='websiteUrl' class='label'>Website:</label>
@@ -48,5 +51,5 @@
     <label for='comments' class='label'>Comments:</label>
     <input id='comments' name='comments' type='text'/>
 
-    <button>Upload!</button>
+    <button>Submit</button>
 </form>

@@ -1,13 +1,22 @@
 var express = require('express');
 var router = express.Router();
+const Card = require('./../models/CardModel')
+const User = require('./../models/UserModel')
+const parser = require('./../config/cloudinary')
 
-/* GET users listing. */
-router.get('/', function (req, res, next) {
-  res.send('respond with a resource');
+router.get('/profile/create', (req, res, next) => {
+  res.render('add-card');
 });
 
-// router.get('/profile/create', (req, res, next) {
 
-// })
+router.post('/profile/create', parser.single('image'), async (req, res, next) => {
+  const newCard = { ...req.body };
+  try {
+    await Card.create(newCard);
+    res.redirect('/profile')
+  } catch (err) {
+    next(err)
+  }
+});
 
 module.exports = router;
