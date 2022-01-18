@@ -91,11 +91,16 @@ nav a:hover {
   border: rgb(236, 201, 188) 2px solid;
   border-radius: 5%;
   margin: 18px;
-  width: 16vw;
-  height: 20vw;
+  width: 20vw;
+  height: 26vw;
   font-size: 16px;
   box-sizing: border-box;
 
+}
+
+.card img {
+  width: 18vw;
+  margin: 5px
 }
 
 .card a {
@@ -118,10 +123,15 @@ nav a:hover {
   border: rgb(236, 201, 188) 2px solid;
   border-radius: 5%;
   margin: auto;
-  width: 25vw;
-  height: 35vw;
-  font-size: 20px;
+  width: 35vw;
+  height: 40vw;
+  font-size: 16px;
   box-sizing: border-box;
+}
+
+.onecard img {
+  width: 33vw;
+  margin: 5px
 }
 
 
@@ -166,3 +176,5 @@ button:hover {
 .auth:hover {
   border: 1px rgb(87, 86, 86) solid;
 }
+
+

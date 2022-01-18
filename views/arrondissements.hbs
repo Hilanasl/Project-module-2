@@ -3,9 +3,8 @@
 <section class='container'>
         {{#each cards}}
         <div class='card'>
-        <p>Image: <img src="{{oneCard.imageUrl}}"/></p>
+        <img src="{{this.image}}"/>
         <p>{{this.title}}</p>
-        <p>{{this.image}}</p>
         <p>Arrondissement: {{this.arrond}}</p>
         <p>{{this.category}}</p>
         <a href='/arrond/{{this.arrond}}/{{this._id}}'>See more info</a>
