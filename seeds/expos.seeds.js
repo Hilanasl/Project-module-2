@@ -43,7 +43,7 @@ const cards = [
 
 
 async function fetchParisAPI() {
-  const URL = "https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=date_start%3A%5B2021-11-30T23%3A00%3A00Z+TO+2022-02-28T22%3A59%3A59Z%5D&q=date_end%3A%5B2022-01-24T23%3A00%3A00Z+TO+2022-07-31T21%3A59%3A59Z%5D&sort=title&facet=date_start&facet=date_end&facet=tags&facet=address_name&facet=address_zipcode&facet=address&rows=1000";
+  const URL = "https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=&rows=100&facet=date_start&facet=date_end&facet=tags&facet=address_name&facet=address_zipcode&facet=address_city&facet=programs&refine.tags=Expo&refine.tags=Art+contemporain&exclude.tags=conf%C3%A9rence";
   return axios.get(URL)
 }
 
@@ -51,7 +51,7 @@ async function fetchParisAPI() {
 function filterStuffOut({ data }) {
   const temp = data.records.map(infos => {
     const expo = infos.fields;
-    //console.log(expo)
+
     return {
       title: expo.title,
       image: expo.cover_url,
@@ -63,8 +63,11 @@ function filterStuffOut({ data }) {
       websiteUrl: expo.url,
     }
   })
+
   // maybe you can check the temp array here and remove unwanted docs
+  console.log("this is temp", temp)
   return temp;
+
 }
 
 (async function () {
@@ -75,8 +78,9 @@ function filterStuffOut({ data }) {
     const foo = await fetchParisAPI();
     //console.log(foo)
     const expos = filterStuffOut(foo);
+    console.log("or this one?", expos)
     const createdCards = await CardModel.create(expos);
-
+    console.log("this one?", createdCards)
     console.log(`Just created ${createdCards.length}`);
     process.exit();
   } catch (err) {
