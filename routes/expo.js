@@ -16,8 +16,15 @@ router.get("/expos", (req, res) => {
         .catch((err) => console.error(err))
 })
 
-const oneCard = ({
+router.get("/street-art", (req, res) => {
+    console.log("just testing");
 
+    axios.get("https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=&facet=date_start&facet=date_end&facet=tags&facet=address_name&facet=address_zipcode&facet=address_city&facet=programs&refine.tags=Street-art")
+        .then(({ data }) => {
+            //console.log("response", data.records)
+            res.render('streetArt', { streetArt: data.records })
+        })
+        .catch((err) => console.error(err))
 })
 
 
