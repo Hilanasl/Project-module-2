@@ -9,6 +9,12 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3vw
+}
+
+.left-nav {
+  display: flex;
+  flex-direction: row;
 }
 
 .to-right {
@@ -61,8 +67,9 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+
 .cat-tags {
-  margin: 30px
+  margin-left: 20px
 }
 
 .cat-tags a {
@@ -73,7 +80,7 @@ nav a:hover {
   padding: 10px;
   font-size: 15px;
   width: 7vw;
-  margin: 10px
+  margin: 10px;
 }
 
 .cat-tags a:hover {

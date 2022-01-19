@@ -5,10 +5,15 @@ body {
     text-align: center;
     font-family: 'Be Vietnam Pro', sans-serif;
   }
+
+  .cat-tags {
+      display: none
+  }
   
   nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  
+    margin-bottom: 3vw
   }
   
   .to-right {

@@ -1,16 +1,25 @@
 <nav>
+    <div class='left-nav'>
     <div class='home-btn'>
-        <a href="/" class="to-left">Home</a>
+    <a href="/" class="to-left">Home</a>
+    </div>
+
+    <div class='cat-tags'>
+    <a href='/category/museums'>Museums</a>
+    <a href='/category/exhibitions'>Exhibitions</a>
+    <a href='/category/street-art'>Street art</a>
+    <a href='/category/public-space'>Public space</a>
+    </div>
     </div>
     <div class='user-btns'>
         {{#unless isLoggedIn}}
-        <a href="/signin" class="to-right">Sign In</a>
-        <a href="/signup" class="to-right">Sign Up</a>
+        <a href="/signin" class="to-right">Sign in</a>
+        <a href="/signup" class="to-right">Sign up</a>
         {{/unless}}
 
         {{#if isLoggedIn}}
-        <a href="/signout" class="to-right">Sign Out</a>
         <a href="/profile" class="to-right">Profile</a>
+        <a href="/signout" class="to-right">Sign out</a>
         {{/if}}
     </div>
 </nav>
