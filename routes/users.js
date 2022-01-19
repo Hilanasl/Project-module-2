@@ -6,6 +6,8 @@ const parser = require('./../config/cloudinary')
 const protectPrivate = require('./../middlewares/protectRoute');
 
 
+
+
 router.get('/profile/create', protectPrivate, (req, res, next) => {
   res.render('add-card', {
     css: ['auth.css']
@@ -15,8 +17,10 @@ router.get('/profile/create', protectPrivate, (req, res, next) => {
 
 router.post('/profile/create', parser.single('image'), async (req, res, next) => {
   const newCard = { ...req.body };
+  console.log(req.body)
   if (!req.file) newCard.image = undefined;
   else newCard.image = req.file.path;
+  newCard.author = req.session.currentUser._id;
   try {
     await Card.create(newCard);
     res.redirect('/profile')
@@ -26,28 +30,43 @@ router.post('/profile/create', parser.single('image'), async (req, res, next) =>
 });
 
 
-router.get('/profile/:id/update', async (req, res, next) => {
+router.get('/profile/:id/update', protectPrivate, async (req, res, next) => {
 try {
   const cardToEdit = await Card.findById(req.params.id);
   res.render('update-card', {
     cardToEdit,
     css: ['auth.css']
   })
+  console.log('reached form')
 } catch (err) {
   next(err)
 }
 });
 
 
-router.post('/profile/:id/update', async (req, res, next) => {
+router.post('/profile/:id/update', parser.single('image'), async (req, res, next) => {
+  const updatedCard = { ...req.body };
+
+  if (!req.file) updatedCard.image = undefined;
+  else updatedCard.image = req.file.path;
   try {
-    await Card.findByIdAndUpdate(req.params.id, req.body);
-    res.redirect('/profile');
+    await Card.findByIdAndUpdate(req.params.id, updatedCard);
+    res.redirect('/profile')
   } catch (err) {
     res.render('update-card')
     next(err);
   }
 });
+
+
+router.post('/profile/:id/delete', async (req, res, next) => {
+  try {
+    Card.findByIdAndDelete(req.params.id);
+    res.redirect('/profile')
+  } catch (err) {
+    next(err)
+  }
+})
 
 
 

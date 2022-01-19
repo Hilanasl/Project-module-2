@@ -23,7 +23,6 @@ body {
   nav {
     display: flex;
     justify-content: space-between;  
-    margin-bottom: 3vw
   }
   
   .to-right {
@@ -31,8 +30,8 @@ body {
   }
   
   h1 {
-    margin: 40px;
     color:rgb(175, 60, 7);
+    margin-bottom: 40px
   }
 
   h2 {
@@ -54,45 +53,8 @@ body {
     border: 1px rgb(32, 32, 32) solid;
   }
   
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 25vw;
-    margin: auto;
-    gap: 10px;
-    border: 1px solid rgb(145, 144, 144);
-    padding: 20px;
-    border-radius: 5%;
-  }
-  
-  label {
-    color:rgb(3, 2, 51)
-  }
 
-  input {
-      color:rgb(15, 49, 112);
-      margin-bottom: 15px
-  }
-  
-  button {
-    color:rgb(153, 67, 110);
-    text-decoration: none;
-    border: 1px rgb(187, 186, 186) solid;
-    border-radius: 50px;
-    padding: 10px;
-    font-size: 15px;
-    width: 7vw;
-    margin: auto
-  }
-  
-  button:hover {
-    border: 1px rgb(87, 86, 86) solid;
-  }
-
-
-  
-  .auth a {
+  .crud a {
     color:rgb(67, 90, 153);
     text-decoration: none;
     border: 1px rgb(187, 186, 186) solid;
@@ -102,9 +64,30 @@ body {
     margin: 10px;
   }
   
-  .auth a:hover {
+  .crud a:hover {
     border: 1px rgb(87, 86, 86) solid;
   }
+
+
+.add-fav-btns a {
+  color:rgb(67, 90, 153);
+  text-decoration: none;
+  border: 1px rgb(187, 186, 186) solid;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 15px;
+  margin-right: 40px
+}
+
+.add-fav-btns a:hover {
+  border: 1px rgb(87, 86, 86) solid;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+}
+  
 
 
   .card {
@@ -112,6 +95,7 @@ body {
     color: whitesmoke;
     border-radius: 5%;
     margin: 18px;
+    margin-bottom: 30px;
     padding: 5px;
     width: 20vw;
     height: 25vw;
@@ -149,36 +133,3 @@ body {
 
 
   
-  .crud a {
-    color:rgb(67, 90, 153);
-    text-decoration: none;
-    border: 1px rgb(187, 186, 186) solid;
-    border-radius: 50px;
-    padding: 10px;
-    font-size: 15px;
-    margin: 10px
-  }
-  
-  .crud a:hover {
-    border: 1px rgb(87, 86, 86) solid;
-  }
-
-
-.add-fav-btns a {
-  color:rgb(67, 90, 153);
-  text-decoration: none;
-  border: 1px rgb(187, 186, 186) solid;
-  border-radius: 50px;
-  padding: 10px;
-  font-size: 15px;
-  margin-right: 40px
-}
-
-.add-fav-btns a:hover {
-  border: 1px rgb(87, 86, 86) solid;
-}
-
-.welcome {
-  display: flex;
-  flex-direction: column;
-}

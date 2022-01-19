@@ -91,10 +91,17 @@ router.post("/signup", (req, res, next) => {
 });
 
 
-router.get('/profile', protectPrivate, (req, res, next) => {
-  res.render('dashboardUser', {
-    css: ['auth.css']
-  });
+router.get('/profile', protectPrivate, async (req, res, next) => {
+  try {
+    const cards = await Card.find({author: req.session.currentUser._id}).populate('author')
+    res.render('dashboardUser', {
+      cards,
+      css: ['dashboard.css']
+    });
+  }
+  catch (err) {
+    next(err)
+  }
 });
 
 router.get("/signout", protectPrivate, (req, res) => {

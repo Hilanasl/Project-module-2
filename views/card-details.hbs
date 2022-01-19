@@ -12,16 +12,11 @@
 <p>{{oneCard.arrond}}</p>
 <p>{{oneCard.websiteUrl}}</p>
 <p>{{oneCard.comments}}</p>
-<p>{{oneCard.category}}</p>
-
-
-</div>
-{{#if isLoggedIn}}
-<div class='crud'>
-    <a href="/profile/:id/update">Update discovery</a>
-    <a href="/profile">Delete discovery</a>
-</div>
+{{!-- <p>{{oneCard.category}}</p> --}}
+{{#if oneCard.author}}
+<p>Added by: {{oneCard.author.username}}</p>
 {{/if}}
+</div>
 
 </div>
 </div>

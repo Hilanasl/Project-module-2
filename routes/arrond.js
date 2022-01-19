@@ -5,7 +5,7 @@ const User = require('./../models/UserModel')
 
 router.get('/arrond/:arrond', async (req, res, next) => {
     try {
-    const cards = await Card.find({arrond: req.params.arrond})
+    const cards = await Card.find({arrond: req.params.arrond}).populate('author')
     res.render('arrondissements', {
         cards,
         css: ['arrond.css']
@@ -19,7 +19,7 @@ router.get('/arrond/:arrond', async (req, res, next) => {
 
 router.get('/arrond/:arrond/:id', async (req, res, next) => {
     try {
-    const oneCard = await Card.findById(req.params.id)
+    const oneCard = await Card.findById(req.params.id).populate('author')
     console.log(oneCard)
     res.render('card-details', {
         oneCard,

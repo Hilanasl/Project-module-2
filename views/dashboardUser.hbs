@@ -1,7 +1,30 @@
+<div class='welcome'>
 <h1>Welcome to your profile {{currentUser.username}}!</h1>
 
-<section>
-    <a href="/profile/create" class='auth'>Add a discovery</a>
-    <a href="/profile/uploads" class='auth'>Your uploads</a>
-    <a ref="/profile/favorites" class='auth'>Your favorites</a>
+    <div class='add-fav-btns'>
+    <a href="/profile/create">Add a discovery</a>
+    <a ref="/profile/favorites">Your favorites</a>
+    </div>
+</div>
+
+<h2>Added by you:</h2>
+
+<section class='container'>
+
+        {{#each cards}}
+        <div class='card-container'>
+        <div class='card'>
+        <img src="{{this.image}}"/>
+        <p>{{this.title}}</p>
+        <p>{{this.location}}</p>
+        <a href='/arrond/{{this.arrond}}/{{this._id}}'>See more info</a>
+        </div>
+        <div class='crud'>
+        <a href="/profile/{{this._id}}/update">Update</a>
+        <a href="/profile/{{this._id}}/delete">Delete</a>
+        </div>
+        </div>
+        {{/each}}
 </section>
+
+
