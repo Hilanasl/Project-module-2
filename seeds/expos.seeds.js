@@ -55,11 +55,12 @@ function filterStuffOut({ data }) {
     return {
       title: expo.title,
       image: expo.cover_url,
+      date: expo.date_start,
       address: expo.address_street,
       location: expo.address_name || "unknown",
       arrond: expo.address_zipcode || "unknown",
       category: expo.tags ? expo.tags.split(";") : [],
-      comments: null,
+      description: expo.description,
       websiteUrl: expo.url,
     }
   })

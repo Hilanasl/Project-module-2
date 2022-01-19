@@ -55,11 +55,12 @@ function filterStuffOut({ data }) {
         return {
             title: streetArt.title,
             image: streetArt.cover_url,
+            startDate: streetArt.date_start,
             address: streetArt.address_street,
             location: streetArt.address_name || "unknown",
             arrond: streetArt.address_zipcode || "unknown",
             category: streetArt.tags ? streetArt.tags.split(";") : [],
-            comments: null,
+            description: streetArt.description,
             websiteUrl: streetArt.url,
         }
     })

@@ -31,16 +31,16 @@ router.post('/profile/create', parser.single('image'), async (req, res, next) =>
 
 
 router.get('/profile/:id/update', protectPrivate, async (req, res, next) => {
-try {
-  const cardToEdit = await Card.findById(req.params.id);
-  res.render('update-card', {
-    cardToEdit,
-    css: ['auth.css']
-  })
-  console.log('reached form')
-} catch (err) {
-  next(err)
-}
+  try {
+    const cardToEdit = await Card.findById(req.params.id);
+    res.render('update-card', {
+      cardToEdit,
+      css: ['auth.css']
+    })
+    console.log('reached form')
+  } catch (err) {
+    next(err)
+  }
 });
 
 
@@ -61,7 +61,7 @@ router.post('/profile/:id/update', parser.single('image'), async (req, res, next
 
 router.post('/profile/:id/delete', async (req, res, next) => {
   try {
-    Card.findByIdAndDelete(req.params.id);
+    const cardToDelete = await Card.findByIdAndRemove(req.params.id);
     res.redirect('/profile')
   } catch (err) {
     next(err)

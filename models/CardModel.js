@@ -6,14 +6,17 @@ const cardSchema = new Schema(
     {
         title: String,
         image: String,
+        date: Date,
         category: [String],
         location: String,
         address: String,
         arrond: String,
         websiteUrl: String,
-        comments: String,
-        author: {type: Schema.Types.ObjectId, 
-            ref: "users" }
+        description: String,
+        author: {
+            type: Schema.Types.ObjectId,
+            ref: "users"
+        }
     }
 );
 
