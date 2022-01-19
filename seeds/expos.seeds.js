@@ -74,7 +74,7 @@ function filterStuffOut({ data }) {
 
 
   try {
-    await CardModel.deleteMany();
+    // await CardModel.deleteMany();
     const foo = await fetchParisAPI();
     //console.log(foo)
     const expos = filterStuffOut(foo);

@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www -e .hbs,.js",
     "seed:expos": "node ./seeds/expos.seeds.js",
-    "seed:streetArt": "node ./seeds/streetArt.seeds.js"
+    "seed:streetArt": "node ./seeds/streetArt.seeds.js",
+    "seed:museums": "node ./seeds/museums.seeds.js"
   },
   "dependencies": {
     "axios": "^0.25.0",
