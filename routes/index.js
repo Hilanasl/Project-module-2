@@ -10,12 +10,16 @@ const salt = 10;
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { 
+    title: 'Express',
+  css: ['style.css'] });
 });
 
 
 router.get('/signin', (req, res, next) => {
-  res.render('auth/signin')
+  res.render('auth/signin', {
+    css: ['auth.css']
+  })
 })
 
 router.post('/signin', protectUnlogged, (req, res, next) => {
@@ -51,7 +55,9 @@ router.post('/signin', protectUnlogged, (req, res, next) => {
 })
 
 router.get('/signup', (req, res) => {
-  res.render('auth/signup')
+  res.render('auth/signup', {
+    css: ['auth.css']
+  })
 })
 
 router.post("/signup", (req, res, next) => {
@@ -86,7 +92,9 @@ router.post("/signup", (req, res, next) => {
 
 
 router.get('/profile', protectPrivate, (req, res, next) => {
-  res.render('dashboardUser');
+  res.render('dashboardUser', {
+    css: ['auth.css']
+  });
 });
 
 router.get("/signout", protectPrivate, (req, res) => {

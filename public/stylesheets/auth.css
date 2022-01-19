@@ -1,0 +1,85 @@
+body {
+    padding: 50px;
+    font: 14px;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .to-right {
+    margin: 10px
+  }
+  
+  h1, h2 {
+    color:rgb(175, 60, 7);
+    margin: 40px
+  }
+  
+  nav a {
+    color:rgb(153, 67, 110);
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px rgb(187, 186, 186) solid;
+    border-radius: 50px;
+    padding: 10px
+  }
+  
+  nav a:hover {
+    border: 1px rgb(32, 32, 32) solid;
+  }
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    margin: auto;
+    gap: 10px;
+    border: 1px solid rgb(145, 144, 144);
+    padding: 20px;
+    border-radius: 5%;
+  }
+  
+  label {
+    color:rgb(3, 2, 51)
+  }
+
+  input {
+      color:rgb(15, 49, 112);
+      margin-bottom: 15px
+  }
+  
+  button {
+    color:rgb(153, 67, 110);
+    text-decoration: none;
+    border: 1px rgb(187, 186, 186) solid;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 15px;
+    width: 7vw;
+    margin: auto
+  }
+  
+  button:hover {
+    border: 1px rgb(87, 86, 86) solid;
+  }
+  
+  .auth {
+    color:rgb(67, 90, 153);
+    text-decoration: none;
+    border: 1px rgb(187, 186, 186) solid;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 15px;
+    width: 7vw;
+    margin: 10px;
+  }
+  
+  .auth:hover {
+    border: 1px rgb(87, 86, 86) solid;
+  }

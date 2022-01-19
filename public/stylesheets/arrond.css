@@ -1,0 +1,133 @@
+body {
+    padding: 50px;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .to-right {
+    margin: 10px
+  }
+  
+  
+  nav a {
+    color:rgb(153, 67, 110);
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px rgb(187, 186, 186) solid;
+    border-radius: 50px;
+    padding: 10px
+  }
+  
+  nav a:hover {
+    border: 1px rgb(32, 32, 32) solid
+  }
+  
+
+  h1, h2 {
+    color:rgb(175, 60, 7)
+  }
+ 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+  .card {
+    background-color: rgb(184, 17, 67);
+    color: whitesmoke;
+    border-radius: 5%;
+    margin: 18px;
+    width: 20vw;
+    height: 25vw;
+    font-size: 14px;
+    font-weight: lighter;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .card img {
+    width: 19vw;
+    margin: 5px;
+    border-radius: 5%;
+  }
+
+
+  .card a {
+    color: whitesmoke;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px rgb(187, 186, 186) solid;
+    border-radius: 50px;
+    padding: 10px;
+    width: 9vw;
+    margin: auto
+  }
+  
+  .card a:hover {
+    border: 1px rgb(83, 3, 23) solid;
+  }
+
+
+
+.onecard {
+    background-color: rgb(184, 106, 17);
+    color: whitesmoke;
+    border: rgb(236, 201, 188) 2px solid;
+    border-radius: 5%;
+    margin: auto;
+    width: 35vw;
+    height: 40vw;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .onecard img {
+    width: 34vw;
+    margin: 5px;
+    border-radius: 5%;
+  
+  }
+
+
+  .return-btn {
+    color:rgb(67, 90, 153);
+    text-decoration: none;
+    border: 1px rgb(187, 186, 186) solid;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  .return-btn:hover {
+    border: 1px rgb(87, 86, 86) solid;
+  }
+
+
+  .crud {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .crud a {
+    color:rgb(67, 90, 153);
+    text-decoration: none;
+    border: 1px rgb(187, 186, 186) solid;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px
+  }
+  
+  .crud a:hover {
+    border: 1px rgb(87, 86, 86) solid;
+  }

@@ -7,7 +7,9 @@ const protectPrivate = require('./../middlewares/protectRoute');
 
 
 router.get('/profile/create', protectPrivate, (req, res, next) => {
-  res.render('add-card');
+  res.render('add-card', {
+    css: ['auth.css']
+  });
 });
 
 
@@ -28,7 +30,8 @@ router.get('/profile/:id/update', async (req, res, next) => {
 try {
   const cardToEdit = await Card.findById(req.params.id);
   res.render('update-card', {
-    cardToEdit
+    cardToEdit,
+    css: ['auth.css']
   })
 } catch (err) {
   next(err)

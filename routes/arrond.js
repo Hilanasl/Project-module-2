@@ -7,7 +7,8 @@ router.get('/arrond/:arrond', async (req, res, next) => {
     try {
     const cards = await Card.find({arrond: req.params.arrond})
     res.render('arrondissements', {
-        cards
+        cards,
+        css: ['arrond.css']
     })} 
     catch (err) {
         next(err)
@@ -20,7 +21,9 @@ router.get('/arrond/:arrond/:id', async (req, res, next) => {
     try {
     const oneCard = await Card.findById(req.params.id)
     console.log(oneCard)
-    res.render('card-details', {oneCard})
+    res.render('card-details', {
+        oneCard,
+        css: ['one-card.css']})
     } catch (err) {
         next(err)
     }
@@ -31,7 +34,8 @@ router.get('/category/:category', async (req, res, next) => {
     try {
     const catCards = await Card.find({category: req.params.category})
     res.render('category', {
-        catCards
+        catCards, 
+        css: ['arrond.css']
     })} 
     catch (err) {
         next(err)
