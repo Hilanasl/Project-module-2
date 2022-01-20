@@ -49,13 +49,15 @@ async function fetchParisAPI() {
 
 
 function filterStuffOut({ data }) {
+  console.log(data);
   const temp = data.records.map(infos => {
     const expo = infos.fields;
 
     return {
       title: expo.title,
       image: expo.cover_url,
-      date: expo.date_start,
+      dateStart: expo.date_start,
+      dateEnd: expo.date_end,
       address: expo.address_street,
       location: expo.address_name || "unknown",
       arrond: expo.address_zipcode || "unknown",

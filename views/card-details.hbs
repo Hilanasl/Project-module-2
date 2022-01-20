@@ -7,14 +7,20 @@
         </div>
         <div class='onecard'>
             <img src="{{oneCard.image}}" />
+            {{#if oneCard.dateStart}}
+            {{formatDate oneCard.dateStart}}
+            {{/if}}
 
-            <p>{{oneCard.date}}</p>
+            {{#if oneCard.dateEnd}}
+            <p>to</p>
+            {{formatDate oneCard.dateEnd}}
+            {{/if}}
 
             <p>{{oneCard.location}}</p>
             <p>{{oneCard.address}}</p>
             <p>{{oneCard.arrond}}</p>
             <p>{{oneCard.websiteUrl}}</p>
-            <p>{{oneCard.description}}</p>
+            <p>{{{oneCard.description}}}</p>
             {{!-- <p>{{oneCard.category}}</p> --}}
             {{#if oneCard.author}}
             <p>Added by: {{oneCard.author.username}}</p>

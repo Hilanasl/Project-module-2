@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('./db/mongo')
+require('./db/mongo');
 
 const createError = require('http-errors');
 const express = require('express');
@@ -32,7 +32,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 // added 17/01
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json())
+app.use(express.json());
+require("./helpers/hbs");
+
 // SESSION SETUP
 app.use(
   session({

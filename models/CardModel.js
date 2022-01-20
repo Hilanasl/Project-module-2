@@ -6,7 +6,8 @@ const cardSchema = new Schema(
     {
         title: String,
         image: String,
-        date: Date,
+        dateStart: Date,
+        dateEnd: Date,
         category: [String],
         location: String,
         address: String,

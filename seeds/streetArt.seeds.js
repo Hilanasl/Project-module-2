@@ -55,7 +55,8 @@ function filterStuffOut({ data }) {
         return {
             title: streetArt.title,
             image: streetArt.cover_url,
-            startDate: streetArt.date_start,
+            dateStart: streetArt.date_start,
+            dateEnd: streetArt.date_end,
             address: streetArt.address_street,
             location: streetArt.address_name || "unknown",
             arrond: streetArt.address_zipcode || "unknown",
