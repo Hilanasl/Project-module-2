@@ -6,7 +6,7 @@
 body {
   padding: 50px;
   font: 14px;
-  background-color: #2E4C6D;
+  background-color: rgb(250, 250, 250);
   text-align: center;
   font-family: 'Be Vietnam Pro', sans-serif;
 }
@@ -29,11 +29,14 @@ body {
   margin: 10px
 }
 
+<<<<<<< HEAD
 
 h1, h2 {
   color:rgb(175, 60, 7);
 
 }
+=======
+>>>>>>> d3df7ebb9a1ac03eb8b02ce2a3de2b39a14b8cc2
 
 nav a {
   color:rgb(153, 67, 110);

@@ -6,45 +6,6 @@ body {
     font-family: 'Be Vietnam Pro', sans-serif;
   }
 
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .favpage {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .card-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .cat-tags {
-      display: none
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;  
-  }
-  
-  .to-right {
-    margin: 10px
-  }
-  
-  h1 {
-    color:#2E4C6D;
-    margin-bottom: 40px
-  }
-
-  h2 {
-    color: #2E4C6D;
-    font-size: 18px;
-    text-align: left;
-  }
-  
   nav a {
     color:rgb(153, 67, 110);
     text-decoration: none;
@@ -57,45 +18,61 @@ body {
   nav a:hover {
     border: 1px rgb(32, 32, 32) solid;
   }
-  
 
-  .button {
-    color:rgb(67, 90, 153);
-    size: 100px;
-    text-decoration: none;
-    margin: 10px;
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .favpage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
+  h1 {
+    color:#2E4C6D;
+    margin-bottom: 40px
+  }
+
+  h2 {
+    color: #2E4C6D;
+    font-size: 18px;
+    text-align: left;
   }
   
-
 
 .add-fav-btns a {
   color:rgb(67, 90, 153);
   text-decoration: none;
-  border: 1px rgb(187, 186, 186) solid;
+  border: #2E4C6D 2px solid;
   border-radius: 50px;
   padding: 10px;
   font-size: 15px;
-  margin-right: 40px
 }
 
 .add-fav-btns a:hover {
-  border: 1px rgb(87, 86, 86) solid;
+  border: 2px #B61919 solid;
 }
 
-.welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.card-buttons {
-  display: flex
+.card-buttons a {
+  border: none;
+  margin: 10px;
+  color: #2E4C6D
 }
 
 .card {
-  border: #CBBCB1 2px solid;
-  color:#556052;
-  border-radius: 5%;
+  background-color: rgb(250, 250, 250);
+  color:#2E4C6D;
   margin: 18px;
   padding: 5px;
   width: 25vw;
@@ -104,37 +81,31 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
 }
 
 .card img {
   max-width: 24vw;
-  max-height: 21vw;
-  border-radius: 5%;
+  max-height: 16vw;
+  margin: 5px
 }
 
 
-.card a {
-  color:#556052;
+.info {
+  color:#2E4C6D;
+  border: #2E4C6D 1px solid;
   text-decoration: none;
-  border: #CBBCB1 2px solid;
   border-radius: 50px;
   padding: 5px;
   width: 9vw;
-  margin: auto;
+  margin: 5px;
   font-size: 14px;
 }
 
-.card a:hover {
-  border: 1px rgb(83, 3, 23) solid;
-  background-color: #AF6B58;
-  font-weight: bold;
-  font-size: 15px
+.info:hover {
+  border: 1px #B61919 solid;
+  background-color: #FDD2BF;
 }
-  
-  .card a:hover {
-    border: 1px rgb(83, 3, 23) solid;
-  }
 
-
-  
+i:hover {
+  color: #B61919
+}
