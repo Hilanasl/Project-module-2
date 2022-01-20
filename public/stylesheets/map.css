@@ -1,0 +1,23 @@
+#body_map {
+    background-color: #FDD2BF;
+    width: 60%;
+  }
+  
+  .hide {
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    margin: 0 auto;
+  }
+  
+  .arr_hide{
+      width:60px;
+      height:20px;
+      position:absolute;
+  }
+  
+  .cls-2:hover {
+    fill: #b0dbff;
+  }
+  
+  

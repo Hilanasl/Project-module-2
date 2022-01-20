@@ -10,9 +10,10 @@ const salt = 10;
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { 
+  res.render('map', {
     title: 'Express',
-  css: ['style.css'] });
+    css: ['style.css', 'map.css']
+  });
 });
 
 
@@ -93,7 +94,7 @@ router.post("/signup", (req, res, next) => {
 
 router.get('/profile', protectPrivate, async (req, res, next) => {
   try {
-    const cards = await Card.find({author: req.session.currentUser._id}).populate('author')
+    const cards = await Card.find({ author: req.session.currentUser._id }).populate('author')
     res.render('dashboardUser', {
       cards,
       css: ['dashboard.css']
