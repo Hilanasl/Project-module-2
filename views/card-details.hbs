@@ -29,9 +29,9 @@
 
         {{#if isLoggedIn}}
         {{#if favUser}}
-        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite' class='one-card-btn'>Remove from favourites</a></p>
+        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite' class='one-card-btn'>Unfavourite <i class="far fa-star"></i></a></p>
         {{else}}
-        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite' class='one-card-btn'>Add to favourites</a></p>
+        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite' class='one-card-btn'>Favourite <i class="fas fa-star"></i></a></p>
         {{/if}}   
         {{/if}} 
 
