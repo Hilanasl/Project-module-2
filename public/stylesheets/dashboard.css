@@ -11,6 +11,11 @@ body {
     flex-direction: row;
   }
 
+  .favpage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .card-container {
     display: flex;
     flex-direction: column;
@@ -30,12 +35,12 @@ body {
   }
   
   h1 {
-    color:#556052;
+    color:#2E4C6D;
     margin-bottom: 40px
   }
 
   h2 {
-    color:rgb(175, 60, 7);
+    color: #2E4C6D;
     font-size: 18px;
     text-align: left;
   }

@@ -1,15 +1,21 @@
 <h1>Your favourites</h1>
 
+    <div class='add-fav-btns'>
+    <a href="/profile">Return to dashboard</a>
+    </div>
+
+<div class='favpage'>
         {{#each favCards.favourites}}
         <div class='card-container'>
         <div class='card'>
         <img src="{{this.image}}"/>
         <p>{{this.title}}</p>
         <div class='card-buttons'>
-        <a href="/profile/{{this._id}}/update"><i class="far fa-edit"></i></a>
+        {{!-- <a href="/profile/{{this._id}}/update"><i class="far fa-edit"></i></a> --}}
         <a href='/arrond/{{this.arrond}}/{{this._id}}'>See more info</a>
-        <a href="/profile/{{this._id}}/delete"><i class="far fa-trash-alt"></i></a>
+        {{!-- <a href="/profile/{{this._id}}/delete"><i class="far fa-trash-alt"></i></a> --}}
         </div>
         </div>
         </div>
         {{/each}}
+</div>

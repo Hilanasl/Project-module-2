@@ -59,8 +59,8 @@ router.get('/arrond/:arrond', async (req, res, next) => {
 
 router.get('/arrond/:arrond/:id', async (req, res, next) => {
     try {
-        const favUser = await User.findOne({$and :[{_id: req.session.currentUser._id}, { favourites: { $in: [req.params.id]}}]}) 
         const oneCard = await Card.findById(req.params.id).populate('author')
+        const favUser = await User.findOne({$and :[{_id: req.session.currentUser?._id}, { favourites: { $in: [req.params.id]}}]}) 
         res.render('card-details', {
             oneCard, favUser,
             css: ['one-card.css']

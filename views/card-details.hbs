@@ -27,10 +27,13 @@
             {{/if}}
         </div>
 
+        {{#if isLoggedIn}}
         {{#if favUser}}
         <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite'>Remove from favourites</a></p>
         {{else}}
         <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite'>Add to favourites</a></p>
-        {{/if}}     
+        {{/if}}   
+        {{/if}} 
+
     </div>
 </div>
