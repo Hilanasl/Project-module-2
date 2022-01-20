@@ -1,20 +1,6 @@
-<div class='welcome'>
+<h1>Your favourites</h1>
 
-<h1>Welcome to your dashboard {{currentUser.username}}!</h1>
-
-    <div class='add-fav-btns'>
-    <a href="/profile/favourites">Click here to see your favourites</a>
-    </div>
-
-<h2>Added by you:</h2>
-<section class='container'>
-
-<div class='card'>
-    <a href="/profile/create">Add a discovery<i class="fas fa-plus"></i>
-</a>
-</div>
-
-        {{#each cards}}
+        {{#each favCards.favourites}}
         <div class='card-container'>
         <div class='card'>
         <img src="{{this.image}}"/>
@@ -27,7 +13,3 @@
         </div>
         </div>
         {{/each}}
-</section>
-
-
-</div>
