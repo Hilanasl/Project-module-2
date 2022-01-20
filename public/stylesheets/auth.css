@@ -32,7 +32,7 @@ body {
   
   h1 {
     margin: 40px;
-    color:rgb(175, 60, 7);
+    color: #2E4C6D;
   }
 
   h2 {
@@ -61,9 +61,8 @@ body {
     width: 25vw;
     margin: auto;
     gap: 10px;
-    border: 1px solid rgb(145, 144, 144);
+    border: none;
     padding: 20px;
-    border-radius: 5%;
   }
   
   label {
@@ -72,26 +71,27 @@ body {
 
   input {
       color:rgb(15, 49, 112);
-      margin-bottom: 15px
+      margin-bottom: 10px;
+      background-color: rgb(250, 250, 250);
+      border: 1px solid #2E4C6D
   }
   
+
   button {
-    color:rgb(153, 67, 110);
+    color:#2E4C6D;
+    border: #2E4C6D 2px solid;
     text-decoration: none;
-    border: 1px rgb(187, 186, 186) solid;
     border-radius: 50px;
-    padding: 10px;
-    font-size: 15px;
-    width: 7vw;
-    margin: auto
+    padding: 5px;
+    width: 9vw;
+    margin: auto;
   }
   
   button:hover {
-    border: 1px rgb(87, 86, 86) solid;
+    border: 2px #B61919 solid;
+    background-color: #FDD2BF;
   }
 
-
-  
   .auth a {
     color:rgb(67, 90, 153);
     text-decoration: none;

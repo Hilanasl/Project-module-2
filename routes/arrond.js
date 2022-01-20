@@ -2,16 +2,18 @@ const express = require('express');
 const router = express.Router();
 const Card = require('./../models/CardModel')
 const User = require('./../models/UserModel')
+const protectPrivate = require('./../middlewares/protectRoute');
+const protectUnlogged = require('./../middlewares/protectUnlogged')
 
 
-
-router.get('/arrond/:arrond/:id/favourite', async (req, res, next) => {
+router.get('/arrond/:arrond/:id/favourite', protectPrivate, async (req, res, next) => {
     try {
         const user = await User.findOne({$and :[{_id: req.session.currentUser._id}, { favourites: { $in: [req.params.id]}}]});
         if (user) {
             await User.findByIdAndUpdate(req.session.currentUser._id, {
                 $pull: {favourites: req.params.id}
-            })}
+            })
+            res.redirect('/profile/favourites')}
         else {
             await User.findByIdAndUpdate(req.session.currentUser._id, {
                 $push: {favourites: req.params.id}

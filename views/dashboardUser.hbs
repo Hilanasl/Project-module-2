@@ -1,34 +1,29 @@
 <div class='welcome'>
-
 <h1>Welcome to your dashboard {{currentUser.username}}!</h1>
 
-    <div class='add-fav-btns'>
-    <a href="/profile/favourites">Click here to see your favourites</a>
-    </div>
+<div class='add-fav-btns'>
+    <a href="/profile/favourites" class='info'>Click here to see your favourites</a>
+</div>
 
 <h2>Added by you:</h2>
 
 <section class='container'>
-
-<div class='card'>
-    <a href="/profile/create">Add a discovery<i class="fas fa-plus"></i>
-</a>
-</div>
-
-        {{#each cards}}
-        <div class='card-container'>
-        <div class='card'>
+    <div class='card'>
+        <a href="/profile/create">Add a discovery<i class="fas fa-plus fa-5x"></i>
+        </a>
+    </div>
+    {{#each cards}}
+    <div class='card'>
         <img src="{{this.image}}"/>
         <p>{{this.title}}</p>
-        <div class='card-buttons'>
-        <a href="/profile/{{this._id}}/update"><i class="far fa-edit"></i></a>
-        <a href='/arrond/{{this.arrond}}/{{this._id}}'>See more info</a>
-        <a href="/profile/{{this._id}}/delete"><i class="far fa-trash-alt"></i></a>
-        </div>
-        </div>
-        </div>
-        {{/each}}
+
+        <a href='/arrond/{{this.arrond}}/{{this._id}}' class='info'>See more info</a>
+
+    <div class='card-buttons'>
+        <a href="/profile/{{this._id}}/update"><i class="far fa-edit fa-lg"></i></a>
+        <a href="/profile/{{this._id}}/delete"><i class="far fa-trash-alt fa-lg"></i></a>
+    </div>
+    </div>
+    {{/each}}
 </section>
-
-
 </div>

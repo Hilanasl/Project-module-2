@@ -42,13 +42,8 @@ body {
     flex-direction: row;
   }
 
-  .cat-tags {
-    margin-left: 20px
-  }
-  
-
   h1, h2 {
-    color:#556052
+    color:#2E4C6D
   }
  
   .container {
@@ -58,9 +53,8 @@ body {
   
 
   .card {
-    border: #CBBCB1 2px solid;
-    color:#556052;
-    border-radius: 5%;
+    background-color: rgb(250, 250, 250);
+    color:#2E4C6D;
     margin: 18px;
     padding: 5px;
     width: 25vw;
@@ -69,46 +63,31 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
   }
   
   .card img {
     max-width: 24vw;
-    max-height: 21vw;
-    border-radius: 5%;
+    max-height: 16vw;
+    margin: 5px
   }
-
-
-  .card a {
-    color:#556052;
+  
+  
+  .info {
+    color:#2E4C6D;
+    border: #2E4C6D 1px solid;
     text-decoration: none;
-    border: #CBBCB1 2px solid;
     border-radius: 50px;
     padding: 5px;
     width: 9vw;
-    margin: auto;
+    margin: 5px;
     font-size: 14px;
   }
   
-  .card a:hover {
-    border: 1px rgb(83, 3, 23) solid;
-    background-color: #AF6B58;
-    font-weight: bold;
-    font-size: 15px
+  .info:hover {
+    border: 1px #B61919 solid;
+    background-color: #FDD2BF;
   }
 
-  .cat-tags a {
-    color:rgb(67, 90, 153);
-    text-decoration: none;
-    border: 1px rgb(187, 186, 186) solid;
-    border-radius: 50px;
-    padding: 10px;
-    font-size: 15px;
-    width: 7vw;
-    margin: 10px
-  }
   
-  .cat-tags a:hover {
-    border: 1px rgb(87, 86, 86) solid;
-  }
+
 
