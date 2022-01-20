@@ -8,7 +8,8 @@ router.get('/arrond/:arrond', async (req, res, next) => {
     const cards = await Card.find({arrond: req.params.arrond}).populate('author')
     res.render('arrondissements', {
         cards,
-        css: ['arrond.css']
+        css: ['arrond.css'],
+        scripts: ['index.js']
     })} 
     catch (err) {
         next(err)
