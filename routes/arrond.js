@@ -5,26 +5,49 @@ const User = require('./../models/UserModel')
 
 router.get('/arrond/:arrond', async (req, res, next) => {
     try {
-    const cards = await Card.find({arrond: req.params.arrond}).populate('author')
-    res.render('arrondissements', {
-        cards,
-        css: ['arrond.css'],
-        scripts: ['index.js']
-    })} 
+        const cards = await Card.find({ arrond: req.params.arrond }).populate('author')
+
+        let previousArrondNumber;
+        if (Number(req.params.arrond) > 75001) {
+            console.log("yes")
+            previousArrondNumber = Number(req.params.arrond) - 1
+        } else {
+            console.log("not")
+            previousArrondNumber = Number(req.params.arrond) + 19
+        }
+
+        let nextArrondNumber;
+        if (Number(req.params.arrond) === 75020) {
+            console.log("yes")
+            nextArrondNumber = Number(req.params.arrond) - 19
+        } else {
+            console.log("not")
+            nextArrondNumber = Number(req.params.arrond) + 1
+        }
+
+        res.render('arrondissements', {
+            cards,
+            previous: previousArrondNumber,
+            next: nextArrondNumber,
+            css: ['arrond.css'],
+            scripts: ['index.js']
+        })
+    }
     catch (err) {
         next(err)
-        }
+    }
 })
 
 
 
 router.get('/arrond/:arrond/:id', async (req, res, next) => {
     try {
-    const oneCard = await Card.findById(req.params.id).populate('author')
-    console.log(oneCard)
-    res.render('card-details', {
-        oneCard,
-        css: ['one-card.css']})
+        const oneCard = await Card.findById(req.params.id).populate('author')
+        console.log(oneCard)
+        res.render('card-details', {
+            oneCard,
+            css: ['one-card.css']
+        })
     } catch (err) {
         next(err)
     }
@@ -33,14 +56,15 @@ router.get('/arrond/:arrond/:id', async (req, res, next) => {
 
 router.get('/category/:category', async (req, res, next) => {
     try {
-    const catCards = await Card.find({category: req.params.category})
-    res.render('category', {
-        catCards, 
-        css: ['arrond.css']
-    })} 
+        const catCards = await Card.find({ category: req.params.category })
+        res.render('category', {
+            catCards,
+            css: ['arrond.css']
+        })
+    }
     catch (err) {
         next(err)
-        }
+    }
 })
 
 

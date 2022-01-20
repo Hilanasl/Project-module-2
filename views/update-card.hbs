@@ -2,24 +2,24 @@
 
 <form action='/profile/{{cardToEdit._id}}/update' method='post' class='form' enctype="multipart/form-data">
     <label for='title' class='label'>Title:</label>
-    <input id='title' name='title' type='text' value='{{cardToEdit.title}}'/>
- 
+    <input id='title' name='title' type='text' value='{{cardToEdit.title}}' />
+
     <label for='image' class='label'>Image:</label>
-    <input id='image' name='image' type='file'/>
+    <input id='image' name='image' type='file' />
 
     <label for='category' class='label'>Category:</label>
     <select name='category'>
-        <option value='museum'>Museum</option>
-        <option value='exhibition'>Exhibition</option>
+        <option value='museums'>Museums</option>
+        <option value='exhibitions'>Exhibitions</option>
         <option value='street-art'>Street art</option>
         <option value='public-space'>Public space</option>
     </select>
 
     <label for='location' class='label'>Location:</label>
-    <input id='location' name='location' type='text' value='{{cardToEdit.location}}'/>
+    <input id='location' name='location' type='text' value='{{cardToEdit.location}}' />
 
     <label for='address' class='label'>Address:</label>
-    <input id='address' name='address' type='text' value='{{cardToEdit.address}}'/>
+    <input id='address' name='address' type='text' value='{{cardToEdit.address}}' />
 
     <label for='arrond' class='label'>Arrondissement:</label>
     <select name='arrond'>
@@ -46,10 +46,10 @@
     </select>
 
     <label for='websiteUrl' class='label'>Website:</label>
-    <input id='websiteUrl' name='websiteUrl' type='text' value='{{cardToEdit.websiteUrl}}'/>
+    <input id='websiteUrl' name='websiteUrl' type='text' value='{{cardToEdit.websiteUrl}}' />
 
     <label for='description' class='label'>Description:</label>
-    <input id='description' name='description' type='text' value='{{cardToEdit.description}}'/>
+    <input id='description' name='description' type='text' value='{{cardToEdit.description}}' />
 
     <button>Submit</button>
 </form>

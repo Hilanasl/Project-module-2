@@ -4,10 +4,11 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
     {
-    fullName: String,
-    username: String,
-    email: {type: String, unique: true},
-    password: String
+        fullName: String,
+        username: String,
+        email: { type: String, unique: true },
+        password: String,
+        favourites: [{ type: Schema.Types.ObjectId, ref: "cards" }]
     }
 );
 
