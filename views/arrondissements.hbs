@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>{{cards.0.arrond}} </h1>
 
 <header>
@@ -15,8 +16,18 @@
                 <p>{{this.location}}</p>
                 <a href='/arrond/{{this.arrond}}/{{this._id}}'>See more info</a>
 
+=======
+<section class='wholepage'>
+<h1>{{cards.0.arrond}} </h1>    
+
+<section class='container'>
+        {{#each cards}}
+        <div class='card'>
+        <img src="{{this.image}}"/>
+        <p>{{this.title}}</p>
+        <a href='/arrond/{{this.arrond}}/{{this._id}}'>See more info</a>
+>>>>>>> fdbaaa3948fe69016e2f7c6defd5ece868c8af77
         </div>
         {{/each}}
-
-
+</section>
 </section>
