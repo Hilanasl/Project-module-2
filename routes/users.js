@@ -68,6 +68,19 @@ router.get('/profile/:id/delete', async (req, res, next) => {
   }
 })
 
+router.get('/profile/favourites', async (req, res, next) => {
+  try {
+    const favCards = await User.findById(req.session.currentUser._id, {favourites: 1, _id: 0}).populate('favourites');
+    res.render('favourites', {
+      favCards,
+      css: ['dashboard.css']
+    });
+  }
+  catch (err) {
+    next(err)
+  }
+});
+
 
 
 module.exports = router;

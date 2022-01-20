@@ -26,9 +26,11 @@
             <p>Added by: {{oneCard.author.username}}</p>
             {{/if}}
         </div>
-        
-        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite'>Add to favourites</a></p>
-        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite'>Remove from favourites</a></p>
 
+        {{#if favUser}}
+        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite'>Remove from favourites</a></p>
+        {{else}}
+        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite'>Add to favourites</a></p>
+        {{/if}}     
     </div>
 </div>

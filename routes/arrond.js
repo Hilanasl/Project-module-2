@@ -7,9 +7,7 @@ const User = require('./../models/UserModel')
 
 router.get('/arrond/:arrond/:id/favourite', async (req, res, next) => {
     try {
-        console.log('hi i am there')
         const user = await User.findOne({$and :[{_id: req.session.currentUser._id}, { favourites: { $in: [req.params.id]}}]});
-        console.log(user)
         if (user) {
             await User.findByIdAndUpdate(req.session.currentUser._id, {
                 $pull: {favourites: req.params.id}
@@ -61,10 +59,10 @@ router.get('/arrond/:arrond', async (req, res, next) => {
 
 router.get('/arrond/:arrond/:id', async (req, res, next) => {
     try {
+        const favUser = await User.findOne({$and :[{_id: req.session.currentUser._id}, { favourites: { $in: [req.params.id]}}]}) 
         const oneCard = await Card.findById(req.params.id).populate('author')
-        console.log(oneCard)
         res.render('card-details', {
-            oneCard,
+            oneCard, favUser,
             css: ['one-card.css']
         })
     } catch (err) {
