@@ -59,7 +59,7 @@ router.post('/profile/:id/update', parser.single('image'), async (req, res, next
 });
 
 
-router.post('/profile/:id/delete', async (req, res, next) => {
+router.get('/profile/:id/delete', async (req, res, next) => {
   try {
     const cardToDelete = await Card.findByIdAndRemove(req.params.id);
     res.redirect('/profile')

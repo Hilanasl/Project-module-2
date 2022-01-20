@@ -5,6 +5,14 @@ body {
     font-family: 'Be Vietnam Pro', sans-serif;
   }
   
+  .wholepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -40,7 +48,7 @@ body {
   
 
   h1, h2 {
-    color:rgb(175, 60, 7)
+    color:#556052
   }
  
   .container {
@@ -50,15 +58,13 @@ body {
   
 
   .card {
-    background-color: rgb(184, 17, 67);
-    color: whitesmoke;
+    border: #CBBCB1 2px solid;
+    color:#556052;
     border-radius: 5%;
     margin: 18px;
     padding: 5px;
-    width: 20vw;
-    height: 25vw;
-    font-size: 14px;
-    font-weight: lighter;
+    width: 25vw;
+    height: 26vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -67,64 +73,29 @@ body {
   }
   
   .card img {
-    max-width: 19vw;
-    margin: 5px;
+    max-width: 24vw;
+    max-height: 21vw;
     border-radius: 5%;
-    max-height: 13vw;
   }
 
 
   .card a {
-    color: whitesmoke;
-    font-size: 14px;
+    color:#556052;
     text-decoration: none;
-    border: 1px rgb(187, 186, 186) solid;
+    border: #CBBCB1 2px solid;
     border-radius: 50px;
-    padding: 10px;
+    padding: 5px;
     width: 9vw;
-    margin: auto
+    margin: auto;
+    font-size: 14px;
   }
   
   .card a:hover {
     border: 1px rgb(83, 3, 23) solid;
+    background-color: #AF6B58;
+    font-weight: bold;
+    font-size: 15px
   }
-
-
-
-.onecard {
-    background-color: rgb(184, 106, 17);
-    color: whitesmoke;
-    border: rgb(236, 201, 188) 2px solid;
-    border-radius: 5%;
-    margin: auto;
-    width: 35vw;
-    height: 40vw;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-  
-  .onecard img {
-    width: 34vw;
-    margin: 5px;
-    border-radius: 5%;
-  
-  }
-
-
-  .return-btn {
-    color:rgb(67, 90, 153);
-    text-decoration: none;
-    border: 1px rgb(187, 186, 186) solid;
-    border-radius: 50px;
-    padding: 10px;
-    font-size: 15px;
-  }
-  
-  .return-btn:hover {
-    border: 1px rgb(87, 86, 86) solid;
-  }
-
-
 
   .cat-tags a {
     color:rgb(67, 90, 153);

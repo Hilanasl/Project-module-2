@@ -7,7 +7,8 @@ const userSchema = new Schema(
     fullName: String,
     username: String,
     email: {type: String, unique: true},
-    password: String
+    password: String,
+    favourites: [{type: Schema.Types.ObjectId, ref: 'cards'}]
     }
 );
 
