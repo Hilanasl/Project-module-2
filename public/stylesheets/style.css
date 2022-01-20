@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   padding: 50px;
   font: 14px;
@@ -6,11 +11,13 @@ body {
   font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-nav {
+.navbar {
   background-color: #FC997C;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 3vw
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .left-nav {
@@ -21,6 +28,7 @@ nav {
 .to-right {
   margin: 10px
 }
+
 
 h1, h2 {
   color:rgb(175, 60, 7);
