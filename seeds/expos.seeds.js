@@ -61,7 +61,7 @@ function filterStuffOut({ data }) {
       address: expo.address_street,
       location: expo.address_name || "unknown",
       arrond: expo.address_zipcode || "unknown",
-      category: expo.tags ? expo.tags.split(";") : [],
+      category: "exhibitions",
       description: expo.description,
       websiteUrl: expo.url,
     }

@@ -60,7 +60,7 @@ function filterStuffOut({ data }) {
             address: streetArt.address_street,
             location: streetArt.address_name || "unknown",
             arrond: streetArt.address_zipcode || "unknown",
-            category: streetArt.tags ? streetArt.tags.split(";") : [],
+            category: "street-art",
             description: streetArt.description,
             websiteUrl: streetArt.url,
         }

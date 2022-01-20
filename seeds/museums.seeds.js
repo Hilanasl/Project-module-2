@@ -283,7 +283,7 @@ function filterStuffOut(data) {
             address: infos.fieldAdresse.addressLine1,
             //  location: infos.address_name || "unknown",
             arrond: infos.fieldAdresse.postalCode || "unknown",
-            //  category: infos.tags ? infos.tags.split(";") : [],
+            category: "museums",
             description: infos.description,
             //  websiteUrl: infos.url,
         }

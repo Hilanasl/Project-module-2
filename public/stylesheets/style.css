@@ -1,12 +1,13 @@
 body {
   padding: 50px;
   font: 14px;
-  background-color: rgb(250, 250, 250);
+  background-color: #2E4C6D;
   text-align: center;
   font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 nav {
+  background-color: #FC997C;
   display: flex;
   justify-content: space-between;
   margin-bottom: 3vw
