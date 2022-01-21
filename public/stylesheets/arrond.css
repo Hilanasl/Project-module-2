@@ -15,9 +15,9 @@ body {
 
 nav {
   height: 70px;
-  background-color: #FC997C;  
   display: flex;
   justify-content: space-between;
+  background-color: rgb(174, 174, 175);
 }
 
 .left-nav {
@@ -71,6 +71,83 @@ padding-left: 5px;
   border-color: #222844;
 }
 
+
+
+
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  h1 {
+    margin: 40px;
+    color: #2E4C6D;
+  }
+
+  h2 {
+    color:rgb(175, 60, 7);
+    font-size: 18px;
+    text-align: left;
+  }
+
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    margin: auto;
+    gap: 10px;
+    border: none;
+    padding: 20px;
+  }
+  
+  label {
+    color:rgb(3, 2, 51)
+  }
+
+  input {
+      color:rgb(15, 49, 112);
+      margin-bottom: 10px;
+      background-color: rgb(210, 222, 231);
+      border: 1px solid #2E4C6D;
+      overflow: auto
+  }
+  
+  #description  {
+    height: 100px;
+    overflow: auto
+  }
+
+ 
+  button {
+    color:#2E4C6D;
+    border: #2E4C6D 2px solid;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 5px;
+    width: 9vw;
+    margin: auto;
+  }
+  
+  button:hover {
+    border: 2px #B61919 solid;
+    background-color: #FDD2BF;
+  }
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .arronds {
   font-size: 40px;
   display: flex;
@@ -79,8 +156,6 @@ padding-left: 5px;
   margin: 0px 280px
 
 }
-
-
   .wholepage {
     display: flex;
     flex-direction: column;
@@ -88,8 +163,6 @@ padding-left: 5px;
     align-items: center;
     align-content: center;
   }
-
-
 
   h1, h2 {
     color:#2E4C6D
@@ -137,7 +210,3 @@ padding-left: 5px;
     border: 1px #B61919 solid;
     background-color: #FDD2BF;
   }
-
-  
-
-
