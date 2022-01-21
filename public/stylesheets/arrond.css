@@ -139,8 +139,8 @@ padding-left: 5px;
   }
   
   button:hover {
-    border: 2px #B61919 solid;
-    background-color: #FDD2BF;
+    border: #2E4C6D 2px solid;
+    background-color: #ee875b;
   }
 
 .welcome {
@@ -209,6 +209,6 @@ padding-left: 5px;
   }
   
   .info:hover {
-    border: 1px #B61919 solid;
-    background-color: #FDD2BF;
+    border: #2E4C6D 1px solid;
+    background-color: #ee875b;
   }
