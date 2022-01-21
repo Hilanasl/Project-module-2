@@ -42,21 +42,12 @@
             </ul>
             {{/unless}}
             {{#if isLoggedIn}}
-            {{!-- <div class="navbar-nav nav-item mr-auto btn-group dropleft">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="fa-solid fa-user"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/profile">Dashboard</a>
-                    <a class="dropdown-item" href="/signout">Sign Out</a>
-                </div>
-            </div> --}}
+
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
+                <li class="to-right nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i> Account
                     </a>
                     <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" role="menu">
                         <a class="dropdown-item" href="/profile">Dashboard</a>
