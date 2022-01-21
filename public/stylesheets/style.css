@@ -1,3 +1,12 @@
+.homepagebody {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 *{
   border: 0;
   padding: 0;
@@ -12,19 +21,12 @@ body {
 
 }
 
-.homepagebody {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
 
 nav {
   height: 70px;
-  background-color: #FC997C;  
   display: flex;
   justify-content: space-between;
+  background-color: rgb(174, 174, 175);
 }
 
 .left-nav {

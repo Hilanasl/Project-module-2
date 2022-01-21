@@ -15,9 +15,9 @@ body {
 
 nav {
   height: 70px;
-  background-color: #FC997C;  
   display: flex;
   justify-content: space-between;
+  background-color: rgb(174, 174, 175);
 }
 
 .left-nav {
@@ -189,4 +189,34 @@ background-color: #FDD2BF;
 
 i:hover {
 color: #B61919
+}
+
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  margin: auto;
+  gap: 10px;
+  border: none;
+  padding: 20px;
+}
+
+label {
+  color:rgb(3, 2, 51)
+}
+
+input {
+    color:rgb(15, 49, 112);
+    margin-bottom: 10px;
+    background-color: rgb(210, 222, 231);
+    border: 1px solid #2E4C6D;
+    overflow: auto
+}
+
+#description  {
+  height: 100px;
+  overflow: auto
 }
