@@ -9,7 +9,6 @@ body {
   background-color: rgb(210, 222, 231);
   text-align: center;
   font-family: 'Be Vietnam Pro', sans-serif;
-
 }
 
 
@@ -17,7 +16,7 @@ nav {
   height: 70px;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(174, 174, 175);
+  background-color: rgb(230, 140, 80);
 }
 
 .left-nav {
