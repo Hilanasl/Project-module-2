@@ -6,9 +6,17 @@
 
 body {
   font: 14px;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(210, 222, 231);
   text-align: center;
   font-family: 'Be Vietnam Pro', sans-serif;
+
+}
+
+.homepagebody {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 

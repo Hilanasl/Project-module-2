@@ -1,10 +1,86 @@
-body {
-    padding: 50px;
-    background-color: rgb(250, 250, 250);
-    text-align: center;
-    font-family: 'Be Vietnam Pro', sans-serif;
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
   }
+
+body {
+  font: 14px;
+  background-color: rgb(210, 222, 231);
+  text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+
+}
+
+
+nav {
+  height: 70px;
+  background-color: #FC997C;  
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.to-right {
+  margin: 10px
+}
+
+a {
+  color: #212925
+}
+
+a:hover {
+  color: #222844;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #222844;
+  border: 1px rgb(32, 32, 32) solid;
+  border-radius: 2px;
   
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #212925;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.form-inline {
+  display: flex;
+flex-direction: row;
+padding-left: 5px;
+  width: 40%;
+}
+
+.btn-outline-success {
+  float: right;
+  color: #212925;
+  border-color: #212925;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #222844;
+  border-color: #222844;
+}
+
+.arronds {
+  font-size: 40px;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  margin: 0px 280px
+
+}
+
+
   .wholepage {
     display: flex;
     flex-direction: column;
@@ -13,34 +89,7 @@ body {
     align-content: center;
   }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3vw
-  }
-  
-  .to-right {
-    margin: 10px
-  }
-  
-  
-  nav a {
-    color:rgb(153, 67, 110);
-    text-decoration: none;
-    font-size: 16px;
-    border: 1px rgb(187, 186, 186) solid;
-    border-radius: 50px;
-    padding: 10px
-  }
-  
-  nav a:hover {
-    border: 1px rgb(32, 32, 32) solid
-  }
-  
-  .left-nav {
-    display: flex;
-    flex-direction: row;
-  }
+
 
   h1, h2 {
     color:#2E4C6D
@@ -53,7 +102,7 @@ body {
   
 
   .card {
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(210, 222, 231);
     color:#2E4C6D;
     margin: 18px;
     padding: 5px;
