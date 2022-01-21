@@ -79,7 +79,8 @@ padding-left: 5px;
 h2 {
   color:#2E4C6D;
   text-align: center;
-  font-size: 24px
+  font-size: 24px;
+  margin: 40px;
 }
 
 .container {
