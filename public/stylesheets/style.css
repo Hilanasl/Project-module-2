@@ -1,5 +1,4 @@
 
-
 *{
   border: 0;
   padding: 0;
@@ -11,7 +10,6 @@ body {
   background-color: #FAFF97;
   text-align: center;
   font-family: 'Be Vietnam Pro', sans-serif;
-
 }
 
 
@@ -91,7 +89,6 @@ padding-left: 5px;
 
 }
 
-
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -165,17 +162,6 @@ form {
 
 label {
   color:rgb(3, 2, 51)
-}
-
-button {
-  color:rgb(153, 67, 110);
-  text-decoration: none;
-  border: 1px rgb(187, 186, 186) solid;
-  border-radius: 50px;
-  padding: 10px;
-  font-size: 15px;
-  width: 7vw;
-  margin: auto
 }
 
 button:hover {
