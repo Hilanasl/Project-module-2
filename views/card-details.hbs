@@ -21,6 +21,11 @@
             <p>{{oneCard.arrond}}</p>
             <p>{{oneCard.websiteUrl}}</p>
             <p>{{{oneCard.description}}}</p>
+
+            {{#if oneCard.permanent}}
+            <p>Permanent/ongoing</p>
+            {{/if}}
+
             {{!-- <p>{{oneCard.category}}</p> --}}
             {{#if oneCard.author}}
             <p>Added by: {{oneCard.author.username}}</p>

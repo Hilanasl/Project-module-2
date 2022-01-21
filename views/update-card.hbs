@@ -7,6 +7,15 @@
     <label for='image' class='label'>Image:</label>
     <input id='image' name='image' type='file' />
 
+    <label for='dateStart' class='label'>Start date:</label>
+    <input id='dateStart' name='dateStart' type='date' min='2022-01-21'/>
+
+    <label for='dateEnd' class='label'>End date:</label>
+    <input id='dateEnd' name='dateEnd' type='date' min='2022-01-21'/>
+
+    <label for='checkbox'>Permanent/ongoing</label>
+    <input type='checkbox' id='permanent' name='permanent'>
+
     <label for='category' class='label'>Category:</label>
     <select name='category'>
         <option value='museums'>Museum</option>
@@ -49,7 +58,7 @@
     <input id='websiteUrl' name='websiteUrl' type='text' value='{{cardToEdit.websiteUrl}}' />
 
     <label for='description' class='label'>Description:</label>
-    <input id='description' name='description' type='text' value='{{cardToEdit.description}}' />
+    <input id='description' name='description' type='textarea' value='{{cardToEdit.description}}' />
 
     <button>Submit</button>
 </form>

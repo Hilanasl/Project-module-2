@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
 const cardSchema = new Schema(
     {
         title: String,
         image: String,
         dateStart: Date,
         dateEnd: Date,
+        permanent: String,
         category: String,
         location: String,
         address: String,
@@ -24,4 +24,3 @@ const cardSchema = new Schema(
 const CardModel = mongoose.model("cards", cardSchema);
 
 module.exports = CardModel;
-

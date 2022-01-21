@@ -2,19 +2,19 @@
 <h1>Welcome to your dashboard {{currentUser.username}}!</h1>
 
 <div class='add-fav-btns'>
-    <a href="/profile/favourites" class='info'>Click here to see your favourites</a>
+    <a href="/profile/favourites" class='info'>Click here to see your favourites<i class="fas fa-star"></i></a>
 </div>
 
 <h2>Added by you:</h2>
 
 <section class='container'>
-    <div class='card'>
-        <a href="/profile/create">Add a discovery<i class="fas fa-plus fa-5x"></i>
-        </a>
+    <div class='add-card'>
+        <a href="/profile/create">Add a discovery</a><a href="/profile/create"><i class="fas fa-plus fa-3x"></i></a>
     </div>
     {{#each cards}}
     <div class='card'>
         <img src="{{this.image}}"/>
+
         <p>{{this.title}}</p>
 
         <a href='/arrond/{{this.arrond}}/{{this._id}}' class='info'>See more info</a>

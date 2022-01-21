@@ -12,7 +12,14 @@
                 {{#each cards}}
                 <div class='card'>
                         <img src="{{this.image}}" />
+
+                        <div class='card-text'>
                         <p>{{this.title}}</p>
+
+                        {{#if this.author}}
+                        <p>Added by: {{this.author.username}}</p>
+                        {{/if}}
+                        </div>
                         <a href='/arrond/{{this.arrond}}/{{this._id}}' class='info'>See more info</a>
                 </div>
                 {{/each}}

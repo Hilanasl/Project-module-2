@@ -5,7 +5,6 @@ const User = require('./../models/UserModel')
 const protectPrivate = require('./../middlewares/protectRoute');
 const protectUnlogged = require('./../middlewares/protectUnlogged')
 
-
 router.get('/arrond/:arrond/:id/favourite', protectPrivate, async (req, res, next) => {
     try {
         const user = await User.findOne({$and :[{_id: req.session.currentUser._id}, { favourites: { $in: [req.params.id]}}]});
@@ -27,7 +26,7 @@ router.get('/arrond/:arrond/:id/favourite', protectPrivate, async (req, res, nex
 router.get('/arrond/:arrond', async (req, res, next) => {
     try {
         const cards = await Card.find({ arrond: req.params.arrond }).populate('author')
-
+        
         let previousArrondNumber;
         if (Number(req.params.arrond) > 75001) {
             console.log("yes")
@@ -72,10 +71,9 @@ router.get('/arrond/:arrond/:id', async (req, res, next) => {
     }
 })
 
-
 router.get('/category/:category', async (req, res, next) => {
     try {
-        const catCards = await Card.find({ category: req.params.category })
+        const catCards = await Card.find({ category: req.params.category }).populate('author')
         res.render('category', {
             catCards,
             css: ['arrond.css']
@@ -85,7 +83,6 @@ router.get('/category/:category', async (req, res, next) => {
         next(err)
     }
 })
-
 
 
 

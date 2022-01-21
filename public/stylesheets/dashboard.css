@@ -1,112 +1,185 @@
 body {
-    padding: 50px;
-    font: 14px;
-    background-color: rgb(250, 250, 250);
-    text-align: center;
-    font-family: 'Be Vietnam Pro', sans-serif;
-  }
+  padding: 50px;
+  font: 14px;
+  background-color: rgb(250, 250, 250);
+  text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
 
-  nav a {
-    color:rgb(153, 67, 110);
-    text-decoration: none;
-    font-size: 16px;
-    border: 1px rgb(187, 186, 186) solid;
-    border-radius: 50px;
-    padding: 10px
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
   }
-  
-  nav a:hover {
-    border: 1px rgb(32, 32, 32) solid;
-  }
+body {
+  font: 14px;
+  background-color: rgb(250, 250, 250);
+  text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+nav {
+  background-color: #FC997C;  
+  display: flex;
+  justify-content: space-between;
+}
+.left-nav {
+  display: flex;
+  flex-direction: row;
+}
+.to-right {
+  margin: 10px
+}
+a {
+  color: #212925
+}
+a:hover {
+  color: #222844;
+}
+.nav-link:focus, .nav-link:hover {
+  color: #222844;
+  border: 1px rgb(32, 32, 32) solid;
+  border-radius: 2px;
+}
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #212925;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+.form-inline {
+  display: flex;
+flex-direction: row;
+padding-left: 5px;
+  width: 40%;
+}
+.btn-outline-success {
+  float: right;
+  color: #212925;
+  border-color: #212925;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #222844;
+  border-color: #222844;
+}
 
-  .welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.favpage {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
+h1 {
+  color:#2E4C6D;
+  margin-bottom: 40px
+}
 
-  }
+h2 {
+  color: #2E4C6D;
+  font-size: 18px;
+  text-align: left;
+}
 
-  .favpage {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  
-  h1 {
-    color:#2E4C6D;
-    margin-bottom: 40px
-  }
-
-  h2 {
-    color: #2E4C6D;
-    font-size: 18px;
-    text-align: left;
-  }
-  
 
 .add-fav-btns a {
-  color:rgb(67, 90, 153);
-  text-decoration: none;
-  border: #2E4C6D 2px solid;
-  border-radius: 50px;
-  padding: 10px;
-  font-size: 15px;
+color:rgb(67, 90, 153);
+text-decoration: none;
+border: #2E4C6D 2px solid;
+border-radius: 50px;
+padding: 10px;
+font-size: 15px;
 }
 
 .add-fav-btns a:hover {
-  border: 2px #B61919 solid;
+border: 2px #B61919 solid;
 }
 
+.add-fav-btns i {
+color: #2E4C6D
+}
 
 .card-buttons a {
-  border: none;
-  margin: 10px;
-  color: #2E4C6D
+border: none;
+margin: 10px;
+color: #2E4C6D
 }
 
 .card {
-  background-color: rgb(250, 250, 250);
-  color:#2E4C6D;
-  margin: 18px;
-  padding: 5px;
-  width: 25vw;
-  height: 26vw;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+background-color: rgb(250, 250, 250);
+color:#2E4C6D;
+margin: 18px;
+padding: 5px;
+width: 25vw;
+height: 26vw;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+}
+
+.card p {
+overflow: auto
 }
 
 .card img {
-  max-width: 24vw;
-  max-height: 16vw;
-  margin: 5px
+max-width: 24vw;
+max-height: 16vw;
+margin: 5px
 }
 
+.add-card {
+background-color: rgb(250, 250, 250);
+border: 1px solid #2E4C6D;
+margin: 18px;
+padding: 5px;
+width: 25vw;
+height: 26vw;
+font-size: 25px;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+align-content: center;
+justify-content: center;
+}
+
+.add-card a, i {
+text-decoration: none;
+color:#2E4C6D;
+margin: 20px
+}
 
 .info {
-  color:#2E4C6D;
-  border: #2E4C6D 1px solid;
-  text-decoration: none;
-  border-radius: 50px;
-  padding: 5px;
-  width: 9vw;
-  margin: 5px;
-  font-size: 14px;
+color:#2E4C6D;
+border: #2E4C6D 1px solid;
+text-decoration: none;
+border-radius: 50px;
+padding: 5px;
+width: 9vw;
+margin: 5px;
+font-size: 14px;
 }
 
 .info:hover {
-  border: 1px #B61919 solid;
-  background-color: #FDD2BF;
+border: 1px #B61919 solid;
+background-color: #FDD2BF;
 }
 
 i:hover {
-  color: #B61919
+color: #B61919
 }
