@@ -1,55 +1,70 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">Art App</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-lg  navbar-static-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Art App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/"><i class="fa-solid fa-landmark"></i><span
-                        class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/"><i class="fa-solid fa-landmark"></i><span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/category/museums">Museums</a>
+                        <a class="dropdown-item" href="/category/exhibitions">Exhibitions</a>
+                        <a class="dropdown-item" href="/category/street-art">Street Art</a>
+                        <a class="dropdown-item" href="/category/public-space">Public Spaces</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">See All</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            {{#unless isLoggedIn}}
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link to-right" href="/signin">Sign In<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link to-right" href="/signup">Sign Up<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            {{/unless}}
+            {{#if isLoggedIn}}
+            {{!-- <div class="navbar-nav nav-item mr-auto btn-group dropleft">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Categories
+                    <i class="fa-solid fa-user"></i>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/category/museums">Museums</a>
-                    <a class="dropdown-item" href="/category/exhibitions">Exhibitions</a>
-                    <a class="dropdown-item" href="/category/street-art">Street Art</a>
-                    <a class="dropdown-item" href="/category/public-space">Public Spaces</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">See All</a>
+                    <a class="dropdown-item" href="/profile">Dashboard</a>
+                    <a class="dropdown-item" href="/signout">Sign Out</a>
                 </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        {{#unless isLoggedIn}}
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link to-right" href="/signin">Sign In<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link to-right" href="/signup">Sign Up<span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-        {{/unless}}
-        {{#if isLoggedIn}}
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/profile"><i class="fa-solid fa-image-user"></i><span
-                        class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/signout">Sign Out<span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-        {{/if}}
+            </div> --}}
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" role="menu">
+                        <a class="dropdown-item" href="/profile">Dashboard</a>
+                        <a class="dropdown-item" href="/signout">Sign Out</a>
+                    </div>
+                </li>
+            </ul>
+            {{/if}}
+        </div>
     </div>
 </nav>

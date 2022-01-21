@@ -1,6 +1,8 @@
 #body_map {
-  background-color: rgb(250, 250, 250);
   width: 60%;
+  display: flex;
+    justify-content: center;
+   
   }
   
   .hide {
