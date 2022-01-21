@@ -5,6 +5,17 @@
    
   }
   
+  #arr_1 {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    visibility: hidden;
+  }
+  
+  #arr_1_marker:hover .arr_1{
+visibility: visible;
+  }
+  
   .hide {
     border-radius: 5px;
     text-align: center;
