@@ -4,18 +4,18 @@
 
 {{> flashMessage}}
 
-<form action="/signup" method="POST">
+<form class="sign-form" action="/signup" method="POST">
     <label for="fullname">Full name</label>
-    <input type="text" name="fullname" id="fullname" required />
+    <input class="sign-input" type="text" name="fullname" id="fullname" required />
 
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" required />
+    <label class="sign-label" for="username">Username</label>
+    <input class="sign-input" type="text" name="username" id="username" required />
 
-    <label for="email">E-mail</label>
-    <input type="email" name="email" id="email" required />
+    <label class="sign-label" for="email">E-mail</label>
+    <input class="sign-input" type="email" name="email" id="email" required />
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required />
+    <label class="sign-label" for="password">Password</label>
+    <input class="sign-input" type="password" name="password" id="password" required />
 
-    <button>Sign up</button>
+    <button class="sign-btn">Sign up</button>
 </form>

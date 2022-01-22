@@ -18,13 +18,18 @@ nav {
   background-color: rgb(230, 140, 80);
 }
 
+.navbar-collapse {
+  height: 40px;
+}
+
 .left-nav {
   display: flex;
   flex-direction: row;
 }
 
 .to-right {
-  margin: 10px;
+  padding-left: 0px;
+  margin-right: 30px;
 }
 
 a {
@@ -56,6 +61,8 @@ a:hover {
   flex-direction: row;
   padding-left: 5px;
   width: 40%;
+  margin: auto;
+  gap: 10px;
 }
 
 .btn-outline-success {
@@ -100,7 +107,7 @@ h2 {
   gap: 10px;
   border: none;
   padding: 20px;
-} */
+}
 
 label {
   color: rgb(3, 2, 51);
@@ -112,14 +119,14 @@ input {
   background-color: rgb(210, 222, 231);
   border: 1px solid #2e4c6d;
   overflow: auto;
-}
+} */
 
 #description {
   height: 100px;
   overflow: auto;
 }
 
-button {
+/* button {
   color: #2e4c6d;
   border: #2e4c6d 2px solid;
   text-decoration: none;
@@ -132,7 +139,7 @@ button {
 button:hover {
   border: #2e4c6d 2px solid;
   background-color: #ee875b;
-}
+} */
 
 .welcome {
   display: flex;

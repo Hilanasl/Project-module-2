@@ -1,16 +1,15 @@
-*{
+* {
   border: 0;
   padding: 0;
   margin: 0;
-  }
+}
 
 body {
   font: 14px;
   background-color: rgb(210, 222, 231);
   text-align: center;
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
-
 
 nav {
   height: 70px;
@@ -25,22 +24,22 @@ nav {
 }
 
 .to-right {
-  margin: 10px
+  margin-right: 30px;
 }
 
 a {
-  color: #212925
+  color: #212925;
 }
 
 a:hover {
   color: #222844;
 }
 
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus,
+.nav-link:hover {
   color: #222844;
   border: 1px rgb(32, 32, 32) solid;
   border-radius: 2px;
-  
 }
 
 .nav-link {
@@ -48,14 +47,17 @@ a:hover {
   padding: 0.5rem 1rem;
   color: #212925;
   text-decoration: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 
 .form-inline {
   display: flex;
-flex-direction: row;
-padding-left: 5px;
+  flex-direction: row;
+  padding-left: 5px;
   width: 40%;
+  margin: auto;
+  gap: 10px;
 }
 
 .btn-outline-success {
@@ -70,181 +72,136 @@ padding-left: 5px;
   border-color: #222844;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+}
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
 
+h1 {
+  margin: 40px;
+  color: #2e4c6d;
+}
 
+h2 {
+  color: rgb(175, 60, 7);
+  font-size: 18px;
+  text-align: left;
+}
 
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
+.sign-btn,
+.add-btn {
+  color: #2e4c6d;
+  border: #2e4c6d 2px solid;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 5px;
+  width: 9vw;
+  margin: auto;
+}
 
-  .card-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  
-  h1 {
-    margin: 40px;
-    color: #2E4C6D;
-  }
-
-  h2 {
-    color:rgb(175, 60, 7);
-    font-size: 18px;
-    text-align: left;
-  }
-
-  
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 25vw;
-    margin: auto;
-    gap: 10px;
-    border: none;
-    padding: 20px;
-  }
-  
-  label {
-    color:rgb(3, 2, 51)
-  }
-
-  input {
-      color:rgb(15, 49, 112);
-      margin-bottom: 10px;
-      background-color: rgb(210, 222, 231);
-      border: 1px solid #2E4C6D;
-      overflow: auto
-  }
-  
-  #description  {
-    height: 100px;
-    overflow: auto
-  }
-
- 
-  button {
-    color:#2E4C6D;
-    border: #2E4C6D 2px solid;
-    text-decoration: none;
-    border-radius: 50px;
-    padding: 5px;
-    width: 9vw;
-    margin: auto;
-  }
-  
-  button:hover {
-    border: #2E4C6D 2px solid;
-    background-color: #ee875b;
-  }
+.sign-btn:hover {
+  border: #2e4c6d 2px solid;
+  background-color: #ee875b;
+}
 
 .welcome {
   display: flex;
   flex-direction: column;
 }
 
-
-
-
-
-
-
-
-
-
-
 .arronds {
   font-size: 40px;
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around; 
-  margin: 0px 280px
-
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0px 280px;
 }
-  .wholepage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
 
-  h1, h2 {
-    color:#2E4C6D
-  }
- 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+.wholepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 
-  .card {
-    background-color: rgb(210, 222, 231);
-    color:#2E4C6D;
-    margin: 18px;
-    padding: 5px;
-    width: 25vw;
-    height: 26vw;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .card img {
-    max-width: 24vw;
-    max-height: 16vw;
-    margin: 5px
-  }
-  
-  
-  .info {
-    color:#2E4C6D;
-    border: #2E4C6D 1px solid;
-    text-decoration: none;
-    border-radius: 50px;
-    padding: 5px;
-    width: 9vw;
-    margin: 5px;
-    font-size: 14px;
-  }
-  
-  .info:hover {
-    border: 1px #B61919 solid;
-    background-color: #FDD2BF;
-  }
+h1,
+h2 {
+  color: #2e4c6d;
+}
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.card {
+  background-color: rgb(210, 222, 231);
+  color: #2e4c6d;
+  margin: 18px;
+  padding: 5px;
+  width: 25vw;
+  height: 26vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.card img {
+  max-width: 24vw;
+  max-height: 16vw;
+  margin: 5px;
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 25vw;
-    margin: auto;
-    gap: 10px;
-    border: none;
-    padding: 20px;
-  }
-  
-  label {
-    color:rgb(3, 2, 51)
-  }
+.info {
+  color: #2e4c6d;
+  border: #2e4c6d 1px solid;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 5px;
+  width: 9vw;
+  margin: 5px;
+  font-size: 14px;
+}
 
-  input {
-      color:rgb(15, 49, 112);
-      margin-bottom: 10px;
-      background-color: rgb(210, 222, 231);
-      border: 1px solid #2E4C6D;
-      overflow: auto
-  }
-  
-  #description  {
-    height: 100px;
-    overflow: auto
-  }
+.info:hover {
+  border: 1px #b61919 solid;
+  background-color: #fdd2bf;
+}
+
+.sign-form,
+.add-form {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  margin: auto;
+  gap: 10px;
+  border: none;
+  padding: 20px;
+}
+
+.sign-label,
+.add-label {
+  color: rgb(3, 2, 51);
+}
+
+.sign-input,
+.add-input {
+  color: rgb(15, 49, 112);
+  margin-bottom: 10px;
+  background-color: rgb(210, 222, 231);
+  border: 1px solid #2e4c6d;
+  overflow: auto;
+}
+
+#description {
+  height: 100px;
+  overflow: auto;
+}

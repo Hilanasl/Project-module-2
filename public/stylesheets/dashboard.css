@@ -18,13 +18,19 @@ nav {
   background-color: rgb(230, 140, 80);
 }
 
+.navbar-collapse {
+  height: 40px;
+  width: 100%;
+}
+
 .left-nav {
   display: flex;
   flex-direction: row;
 }
 
 .to-right {
-  margin: 30px;
+  padding-left: 0px;
+  margin-right: 30px;
 }
 
 a {
@@ -56,6 +62,8 @@ a:hover {
   flex-direction: row;
   padding-left: 5px;
   width: 40%;
+  margin: auto;
+  gap: 10px;
 }
 
 .btn-outline-success {
@@ -162,8 +170,8 @@ h2 {
   justify-content: center;
 }
 
-.add-card a,
-i {
+.add-card .link-dash,
+.icon-dash {
   text-decoration: none;
   color: #2e4c6d;
   margin: 20px;
@@ -189,31 +197,21 @@ i {
   background-color: #ee875b;
 }
 
-i:hover {
+.icon-dash:hover {
   color: #b61919;
 }
 
-/* form {
-  display: flex;
-  flex-direction: column;
-  width: 25vw;
-  margin: auto;
-  gap: 10px;
-  border: none;
-  padding: 20px;
-} */
-
-label {
+/* .label {
   color: rgb(3, 2, 51);
 }
 
-input {
+.input {
   color: rgb(15, 49, 112);
-
   background-color: rgb(210, 222, 231);
   border: 1px solid #2e4c6d;
   overflow: auto;
-}
+  border: 2px grey solid;
+} */
 
 #description {
   height: 100px;

@@ -2,14 +2,14 @@
 <h1>Welcome to your dashboard {{currentUser.username}}!</h1>
 
 <div class='add-fav-btns'>
-    <a href="/profile/favourites" class='info'>Click here to see your favourites<i class="fas fa-star"></i></a>
+    <a href="/profile/favourites" class='info'>Click here to see your favourites<i class="fas fa-star icon-dash"></i></a>
 </div>
 
 <h2>Added by you:</h2>
 
 <section class='container'>
     <div class='add-card'>
-        <a href="/profile/create">Add a discovery</a><a href="/profile/create"><i class="fas fa-plus fa-3x"></i></a>
+        <a class="link-dash" href="/profile/create">Add a discovery</a><a href="/profile/create"><i class="fas fa-plus fa-3x icon-dash"></i></a>
     </div>
     {{#each cards}}
     <div class='card'>
@@ -20,8 +20,8 @@
         <a href='/arrond/{{this.arrond}}/{{this._id}}' class='info'>See more info</a>
 
     <div class='card-buttons'>
-        <a href="/profile/{{this._id}}/update"><i class="far fa-edit fa-lg"></i></a>
-        <a href="/profile/{{this._id}}/delete"><i class="far fa-trash-alt fa-lg"></i></a>
+        <a class="link-dash" href="/profile/{{this._id}}/update"><i class="far fa-edit fa-lg"></i></a>
+        <a class="link-dash" href="/profile/{{this._id}}/delete"><i class="far fa-trash-alt fa-lg"></i></a>
     </div>
     </div>
     {{/each}}
