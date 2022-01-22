@@ -153,6 +153,7 @@ button:hover {
   justify-content: space-around;
   margin: 0px 280px;
 }
+
 .wholepage {
   display: flex;
   flex-direction: column;

@@ -94,7 +94,8 @@ h2 {
 }
 
 .sign-btn,
-.add-btn {
+.add-btn,
+.update-btn {
   color: #2e4c6d;
   border: #2e4c6d 2px solid;
   text-decoration: none;
@@ -104,7 +105,9 @@ h2 {
   margin: auto;
 }
 
-.sign-btn:hover {
+.sign-btn:hover,
+.add-btn:hover,
+.update-btn:hover {
   border: #2e4c6d 2px solid;
   background-color: #ee875b;
 }
@@ -177,7 +180,8 @@ h2 {
 }
 
 .sign-form,
-.add-form {
+.add-form,
+.update-form {
   display: flex;
   flex-direction: column;
   width: 25vw;
@@ -188,12 +192,14 @@ h2 {
 }
 
 .sign-label,
-.add-label {
+.add-label,
+.update-label {
   color: rgb(3, 2, 51);
 }
 
 .sign-input,
-.add-input {
+.add-input,
+.update-input {
   color: rgb(15, 49, 112);
   margin-bottom: 10px;
   background-color: rgb(210, 222, 231);
