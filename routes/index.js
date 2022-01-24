@@ -66,6 +66,7 @@ router.post("/signup", (req, res, next) => {
   if (!newUser.fullname || !newUser.username || !newUser.email || !newUser.password) {
     req.flash("error", "Please fill in all the fields");
     res.redirect("/signup");
+    console.log("newUser" ,newUser)
   } else {
     User.findOne({ email: newUser.email })
       .then((email) => {
@@ -75,19 +76,20 @@ router.post("/signup", (req, res, next) => {
             "This e-mail already exists in our database!"
           );
           res.redirect("/signup");
+        } else {
+        const hashedPassword = bcrypt.hashSync(newUser.password, salt);
+        newUser.password = hashedPassword;
+    
+        User.create(newUser)
+          .then(() => {
+            req.flash("success", "Account successfully created!");
+            res.redirect('/signin')
+          })
+          .catch(next)
         }
       })
       .catch(next);
 
-    const hashedPassword = bcrypt.hashSync(newUser.password, salt);
-    newUser.password = hashedPassword;
-
-    User.create(newUser)
-      .then(() => {
-        req.flash("success", "Account successfully created!");
-        res.redirect('/signin')
-      })
-      .catch(next)
   }
 });
 
