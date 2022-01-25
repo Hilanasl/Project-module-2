@@ -38,10 +38,8 @@ router.get('/arrond/:arrond', async (req, res, next) => {
 
         let nextArrondNumber;
         if (Number(req.params.arrond) === 75020) {
-            console.log("yes")
             nextArrondNumber = Number(req.params.arrond) - 19
         } else {
-            console.log("not")
             nextArrondNumber = Number(req.params.arrond) + 1
         }
 

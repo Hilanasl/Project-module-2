@@ -1,25 +1,14 @@
-
-
-*{
+* {
   border: 0;
   padding: 0;
   margin: 0;
-  }
+}
 
 body {
   font: 14px;
-  background-color: #FAFF97;
+  background-color: #faff97;
   text-align: center;
-  font-family: 'Be Vietnam Pro', sans-serif;
-
-}
-
-
-nav {
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #b0dbff;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 .homepagebody {
@@ -29,7 +18,12 @@ nav {
   justify-content: center;
 }
 
-
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #b0dbff;
+}
 
 .left-nav {
   display: flex;
@@ -37,22 +31,22 @@ nav {
 }
 
 .to-right {
-  margin-right: 30px
+  margin-right: 30px;
 }
 
 a {
-  color: #212925
+  color: #212925;
 }
 
 a:hover {
-  color: #222844;
+  color: #2e4c6d;
 }
 
-.nav-link:focus, .nav-link:hover {
-  color: #222844;
-  border: 1px rgb(32, 32, 32) solid;
+.nav-link:focus,
+.nav-link:hover {
+  color: #2e4c6d;
+  border: 1px #2e4c6d solid;
   border-radius: 2px;
-  
 }
 
 .nav-link {
@@ -60,14 +54,17 @@ a:hover {
   padding: 0.5rem 1rem;
   color: #212925;
   text-decoration: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 
 .form-inline {
   display: flex;
-flex-direction: row;
-padding-left: 5px;
+  flex-direction: row;
+  padding-left: 5px;
   width: 40%;
+  margin: auto;
+  gap: 10px;
 }
 
 .btn-outline-success {
@@ -78,28 +75,25 @@ padding-left: 5px;
 
 .btn-outline-success:hover {
   color: #fff;
-  background-color: #222844;
-  border-color: #222844;
+  background-color: #2e4c6d;
+  border-color: #2e4c6d;
 }
 
 .arronds {
   font-size: 40px;
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around; 
-  margin: 0px 280px
-
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0px 280px;
 }
-
 
 .container {
   display: flex;
   flex-wrap: wrap;
 }
 
-
-.cat-tags {
-  margin-left: 20px
+/* .cat-tags {
+  margin-left: 20px;
 }
 
 .card {
@@ -112,8 +106,7 @@ padding-left: 5px;
   height: 26vw;
   font-size: 15px;
   box-sizing: border-box;
-
-}
+} */
 
 .card img {
   width: 19vw;
@@ -127,13 +120,12 @@ padding-left: 5px;
   text-decoration: none;
   border: 1px rgb(187, 186, 186) solid;
   border-radius: 50px;
-  padding: 10px
+  padding: 10px;
 }
 
 .card a:hover {
   border: 1px rgb(83, 3, 23) solid;
 }
-
 
 .onecard {
   background-color: rgb(184, 106, 17);
@@ -151,33 +143,8 @@ padding-left: 5px;
   width: 34vw;
   margin: 5px;
   border-radius: 5%;
-
-}
-
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 25vw;
-  margin: auto;
-  gap: 10px
 }
 
 label {
-  color:rgb(3, 2, 51)
-}
-
-button {
-  color:rgb(153, 67, 110);
-  text-decoration: none;
-  border: 1px rgb(187, 186, 186) solid;
-  border-radius: 50px;
-  padding: 10px;
-  font-size: 15px;
-  width: 7vw;
-  margin: auto
-}
-
-button:hover {
-  border: 1px rgb(87, 86, 86) solid;
+  color: rgb(3, 2, 51);
 }

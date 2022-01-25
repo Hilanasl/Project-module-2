@@ -1,22 +1,22 @@
 <h1>Update <i>'{{cardToEdit.title}}'</i></h1>
 
-<form action='/profile/{{cardToEdit._id}}/update' method='post' class='form' enctype="multipart/form-data">
+<form action='/profile/{{cardToEdit._id}}/update' method='post' class='update-form' enctype="multipart/form-data">
     <label for='title' class='label'>Title:</label>
-    <input id='title' name='title' type='text' value='{{cardToEdit.title}}' />
+    <input class='update-input' id='title' name='title' type='text' value='{{cardToEdit.title}}' />
 
-    <label for='image' class='label'>Image:</label>
-    <input id='image' name='image' type='file' />
+    <label for='image' class='update-label'>Image:</label>
+    <input class='update-input' id='image' name='image' type='file' />
 
-    <label for='dateStart' class='label'>Start date:</label>
-    <input id='dateStart' name='dateStart' type='date' min='2022-01-21'/>
+    <label for='dateStart' class='update-label'>Start date:</label>
+    <input class='update-input' id='dateStart' name='dateStart' type='date' min='2022-01-21'/>
 
-    <label for='dateEnd' class='label'>End date:</label>
-    <input id='dateEnd' name='dateEnd' type='date' min='2022-01-21'/>
+    <label for='dateEnd' class='update-label'>End date:</label>
+    <input class='update-input' id='dateEnd' name='dateEnd' type='date' min='2022-01-21'/>
 
     <label for='checkbox'>Permanent/ongoing</label>
-    <input type='checkbox' id='permanent' name='permanent'>
+    <input class='update-input' type='checkbox' id='permanent' name='permanent'>
 
-    <label for='category' class='label'>Category:</label>
+    <label for='category' class='update-label'>Category:</label>
     <select name='category'>
         <option value='museums'>Museum</option>
         <option value='exhibitions'>Exhibition</option>
@@ -24,13 +24,13 @@
         <option value='public-space'>Public space</option>
     </select>
 
-    <label for='location' class='label'>Location:</label>
-    <input id='location' name='location' type='text' value='{{cardToEdit.location}}' />
+    <label for='location' class='update-label'>Location:</label>
+    <input class='update-input' id='location' name='location' type='text' value='{{cardToEdit.location}}' />
 
-    <label for='address' class='label'>Address:</label>
-    <input id='address' name='address' type='text' value='{{cardToEdit.address}}' />
+    <label for='address' class='update-label'>Address:</label>
+    <input class='update-input' id='address' name='address' type='text' value='{{cardToEdit.address}}' />
 
-    <label for='arrond' class='label'>Arrondissement:</label>
+    <label for='arrond' class='update-label'>Arrondissement:</label>
     <select name='arrond'>
         <option value='75001'>1st</option>
         <option value='75002'>2nd</option>
@@ -54,11 +54,11 @@
         <option value='75020'>20th</option>
     </select>
 
-    <label for='websiteUrl' class='label'>Website:</label>
-    <input id='websiteUrl' name='websiteUrl' type='text' value='{{cardToEdit.websiteUrl}}' />
+    <label for='websiteUrl' class='update-label'>Website:</label>
+    <input class='update-input' id='websiteUrl' name='websiteUrl' type='text' value='{{cardToEdit.websiteUrl}}' />
 
-    <label for='description' class='label'>Description:</label>
-    <input id='description' name='description' type='textarea' value='{{cardToEdit.description}}' />
+    <label for='description' class='update-label'>Description:</label>
+    <input class='update-input' id='description' name='description' type='textarea' value='{{cardToEdit.description}}' />
 
-    <button>Submit</button>
+    <button class='update-btn'>Submit</button>
 </form>
