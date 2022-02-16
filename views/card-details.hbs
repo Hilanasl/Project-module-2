@@ -1,12 +1,23 @@
 <div class='wholepage'>
-    <h2>{{oneCard.title}}</h2>
+            <h2>{{oneCard.title}}</h2>
+
+    <div class='header'>
+        <div class='return'>
+        <a href='/arrond/{{oneCard.arrond}}' class='one-card-btn'>{{oneCard.arrond}}</a>
+        </div>
+        {{#if isLoggedIn}}
+        {{#if favUser}}
+        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite' class='one-card-btn'>Unfavourite <i class="far fa-star"></i></a></p>
+        {{else}}
+        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite' class='one-card-btn'>Favourite <i class="fas fa-star"></i></a></p>
+        {{/if}}   
+        {{/if}} 
+    </div>
 
     <div class='container'>
-        <div class='return'>
-            <a href='/arrond/{{oneCard.arrond}}' class='one-card-btn'>{{oneCard.arrond}}</a>
-        </div>
+            <img class='main-img' src="{{oneCard.image}}" />
+
         <div class='onecard'>
-            <img src="{{oneCard.image}}" />
             {{#if oneCard.dateStart}}
             {{formatDate oneCard.dateStart}}
             {{/if}}
@@ -16,29 +27,32 @@
             {{formatDate oneCard.dateEnd}}
             {{/if}}
 
-            <p>{{oneCard.location}}</p>
-            <p>{{oneCard.address}}</p>
-            <p>{{oneCard.arrond}}</p>
-            <p>{{oneCard.websiteUrl}}</p>
-            <p>{{{oneCard.description}}}</p>
-
             {{#if oneCard.permanent}}
-            <p>Permanent/ongoing</p>
+            <p>Date: Permanent/ongoing</p>
             {{/if}}
+
+            {{#if oneCard.location}}
+            <p>Location: {{oneCard.location}}</p>
+            {{/if}}
+
+            {{#if oneCard.address}}
+            <p>Address: {{oneCard.address}}</p>
+            {{/if}}
+
+            {{#if oneCard.website}}
+            <p>Website: {{oneCard.websiteUrl}}</p>
+            {{/if}}
+            <div class='description'>
+            <p>{{{oneCard.description}}}</p>
+            </div>
 
             {{!-- <p>{{oneCard.category}}</p> --}}
             {{#if oneCard.author}}
             <p>Added by: {{oneCard.author.username}}</p>
             {{/if}}
         </div>
+    </div>
 
-        {{#if isLoggedIn}}
-        {{#if favUser}}
-        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite' class='one-card-btn'>Unfavourite <i class="far fa-star"></i></a></p>
-        {{else}}
-        <p><a href='/arrond/{{oneCard.arrond}}/{{oneCard._id}}/favourite' class='one-card-btn'>Favourite <i class="fas fa-star"></i></a></p>
-        {{/if}}   
-        {{/if}} 
+
 
     </div>
-</div>
